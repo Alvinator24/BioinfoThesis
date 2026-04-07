@@ -1,0 +1,3074 @@
+{
+  "RF_TCGA_IRUS_No_RFE": {
+    "relative_path": "TCGA No Infinium\\PKL\\RF_TCGA_IRUS_No_RFE.pkl",
+    "group_folder": "TCGA No Infinium",
+    "cohort": "TCGA",
+    "infinium_purify": false,
+    "file_size_bytes": 1646998,
+    "file_size_mb": 1.57,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 74})"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=20, min_samples_split=7, n_estimators=181,\n                       random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 74})",
+      "rf": "RandomForestClassifier(max_depth=20, min_samples_split=7, n_estimators=181,\n                       random_state=0)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 74
+      },
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 20,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 1,
+      "rf__min_samples_split": 7,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 181,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "irus",
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": {
+        "LumA": 74
+      }
+    },
+    "rfe_params": null,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 20,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 7,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 181,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 19277,
+      "feature_importances_shape": [
+        19277
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 181,
+      "total_nodes": 9235,
+      "avg_nodes_per_tree": 51.02209944751381,
+      "avg_tree_depth": 8.160220994475138,
+      "max_tree_depth": 11,
+      "avg_leaves_per_tree": 26.011049723756905
+    }
+  },
+  "RF_TCGA_IRUS_RFE": {
+    "relative_path": "TCGA No Infinium\\PKL\\RF_TCGA_IRUS_RFE.pkl",
+    "group_folder": "TCGA No Infinium",
+    "cohort": "TCGA",
+    "infinium_purify": false,
+    "file_size_bytes": 2652886,
+    "file_size_mb": 2.53,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "rfe",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 74})"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.5)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=20, min_samples_leaf=2, min_samples_split=5,\n                       n_estimators=153, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 74})",
+      "rfe": "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.5)",
+      "rf": "RandomForestClassifier(max_depth=20, min_samples_leaf=2, min_samples_split=5,\n                       n_estimators=153, random_state=0)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 74
+      },
+      "rfe__estimator__bootstrap": true,
+      "rfe__estimator__ccp_alpha": 0.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__criterion": "gini",
+      "rfe__estimator__max_depth": null,
+      "rfe__estimator__max_features": "sqrt",
+      "rfe__estimator__max_leaf_nodes": null,
+      "rfe__estimator__max_samples": null,
+      "rfe__estimator__min_impurity_decrease": 0.0,
+      "rfe__estimator__min_samples_leaf": 1,
+      "rfe__estimator__min_samples_split": 2,
+      "rfe__estimator__min_weight_fraction_leaf": 0.0,
+      "rfe__estimator__monotonic_cst": null,
+      "rfe__estimator__n_estimators": 100,
+      "rfe__estimator__n_jobs": null,
+      "rfe__estimator__oob_score": false,
+      "rfe__estimator__random_state": 0,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator__warm_start": false,
+      "rfe__estimator": "RandomForestClassifier(random_state=0)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 100,
+      "rfe__step": 0.5,
+      "rfe__verbose": 0,
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 20,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 2,
+      "rf__min_samples_split": 5,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 153,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "irus",
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": {
+        "LumA": 74
+      }
+    },
+    "rfe_params": {
+      "estimator__bootstrap": true,
+      "estimator__ccp_alpha": 0.0,
+      "estimator__class_weight": null,
+      "estimator__criterion": "gini",
+      "estimator__max_depth": null,
+      "estimator__max_features": "sqrt",
+      "estimator__max_leaf_nodes": null,
+      "estimator__max_samples": null,
+      "estimator__min_impurity_decrease": 0.0,
+      "estimator__min_samples_leaf": 1,
+      "estimator__min_samples_split": 2,
+      "estimator__min_weight_fraction_leaf": 0.0,
+      "estimator__monotonic_cst": null,
+      "estimator__n_estimators": 100,
+      "estimator__n_jobs": null,
+      "estimator__oob_score": false,
+      "estimator__random_state": 0,
+      "estimator__verbose": 0,
+      "estimator__warm_start": false,
+      "estimator": "RandomForestClassifier(random_state=0)",
+      "importance_getter": "auto",
+      "n_features_to_select": 100,
+      "step": 0.5,
+      "verbose": 0
+    },
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 20,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 153,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 100,
+      "feature_importances_shape": [
+        100
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 153,
+      "total_nodes": 9141,
+      "avg_nodes_per_tree": 59.745098039215684,
+      "avg_tree_depth": 8.477124183006536,
+      "max_tree_depth": 12,
+      "avg_leaves_per_tree": 30.372549019607842
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 100,
+      "support_sum": 100,
+      "ranking_shape": [
+        19277
+      ]
+    }
+  },
+  "RF_TCGA_NoImb_No_RFE": {
+    "relative_path": "TCGA No Infinium\\PKL\\RF_TCGA_NoImb_No_RFE.pkl",
+    "group_folder": "TCGA No Infinium",
+    "cohort": "TCGA",
+    "infinium_purify": false,
+    "file_size_bytes": 1545862,
+    "file_size_mb": 1.47,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "rf",
+          "RandomForestClassifier(min_samples_split=5, n_estimators=145, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "rf": "RandomForestClassifier(min_samples_split=5, n_estimators=145, random_state=0)",
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": null,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 1,
+      "rf__min_samples_split": 5,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 145,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": null,
+    "sampler_params": null,
+    "rfe_params": null,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 145,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 19277,
+      "feature_importances_shape": [
+        19277
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 145,
+      "total_nodes": 11347,
+      "avg_nodes_per_tree": 78.2551724137931,
+      "avg_tree_depth": 12.317241379310344,
+      "max_tree_depth": 19,
+      "avg_leaves_per_tree": 39.62758620689655
+    }
+  },
+  "RF_TCGA_NoImb_RFE": {
+    "relative_path": "TCGA No Infinium\\PKL\\RF_TCGA_NoImb_RFE.pkl",
+    "group_folder": "TCGA No Infinium",
+    "cohort": "TCGA",
+    "infinium_purify": false,
+    "file_size_bytes": 4277062,
+    "file_size_mb": 4.08,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "rfe",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "rfe",
+          "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.5)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=25, min_samples_split=3, n_estimators=228,\n                       random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "rfe": "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.5)",
+      "rf": "RandomForestClassifier(max_depth=25, min_samples_split=3, n_estimators=228,\n                       random_state=0)",
+      "rfe__estimator__bootstrap": true,
+      "rfe__estimator__ccp_alpha": 0.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__criterion": "gini",
+      "rfe__estimator__max_depth": null,
+      "rfe__estimator__max_features": "sqrt",
+      "rfe__estimator__max_leaf_nodes": null,
+      "rfe__estimator__max_samples": null,
+      "rfe__estimator__min_impurity_decrease": 0.0,
+      "rfe__estimator__min_samples_leaf": 1,
+      "rfe__estimator__min_samples_split": 2,
+      "rfe__estimator__min_weight_fraction_leaf": 0.0,
+      "rfe__estimator__monotonic_cst": null,
+      "rfe__estimator__n_estimators": 100,
+      "rfe__estimator__n_jobs": null,
+      "rfe__estimator__oob_score": false,
+      "rfe__estimator__random_state": 0,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator__warm_start": false,
+      "rfe__estimator": "RandomForestClassifier(random_state=0)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 100,
+      "rfe__step": 0.5,
+      "rfe__verbose": 0,
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 25,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 1,
+      "rf__min_samples_split": 3,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 228,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": null,
+    "sampler_params": null,
+    "rfe_params": {
+      "estimator__bootstrap": true,
+      "estimator__ccp_alpha": 0.0,
+      "estimator__class_weight": null,
+      "estimator__criterion": "gini",
+      "estimator__max_depth": null,
+      "estimator__max_features": "sqrt",
+      "estimator__max_leaf_nodes": null,
+      "estimator__max_samples": null,
+      "estimator__min_impurity_decrease": 0.0,
+      "estimator__min_samples_leaf": 1,
+      "estimator__min_samples_split": 2,
+      "estimator__min_weight_fraction_leaf": 0.0,
+      "estimator__monotonic_cst": null,
+      "estimator__n_estimators": 100,
+      "estimator__n_jobs": null,
+      "estimator__oob_score": false,
+      "estimator__random_state": 0,
+      "estimator__verbose": 0,
+      "estimator__warm_start": false,
+      "estimator": "RandomForestClassifier(random_state=0)",
+      "importance_getter": "auto",
+      "n_features_to_select": 100,
+      "step": 0.5,
+      "verbose": 0
+    },
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 25,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 3,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 228,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 100,
+      "feature_importances_shape": [
+        100
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 228,
+      "total_nodes": 23864,
+      "avg_nodes_per_tree": 104.66666666666667,
+      "avg_tree_depth": 12.039473684210526,
+      "max_tree_depth": 19,
+      "avg_leaves_per_tree": 52.833333333333336
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 100,
+      "support_sum": 100,
+      "ranking_shape": [
+        19277
+      ]
+    }
+  },
+  "RF_TCGA_SMOTE_No_RFE": {
+    "relative_path": "TCGA No Infinium\\PKL\\RF_TCGA_SMOTE_No_RFE.pkl",
+    "group_folder": "TCGA No Infinium",
+    "cohort": "TCGA",
+    "infinium_purify": false,
+    "file_size_bytes": 11868294,
+    "file_size_mb": 11.32,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(k_neighbors=7, random_state=0)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=5, min_samples_leaf=4, min_samples_split=8,\n                       n_estimators=91, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(k_neighbors=7, random_state=0)",
+      "rf": "RandomForestClassifier(max_depth=5, min_samples_leaf=4, min_samples_split=8,\n                       n_estimators=91, random_state=0)",
+      "smote__k_neighbors": 7,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 5,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 4,
+      "rf__min_samples_split": 8,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 91,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "smote",
+    "sampler_params": {
+      "k_neighbors": 7,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "rfe_params": null,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 5,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 4,
+      "min_samples_split": 8,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 91,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 19277,
+      "feature_importances_shape": [
+        19277
+      ],
+      "feature_importances_sum": 1.0000000000000002,
+      "trained_tree_count": 91,
+      "total_nodes": 4107,
+      "avg_nodes_per_tree": 45.13186813186813,
+      "avg_tree_depth": 5.0,
+      "max_tree_depth": 5,
+      "avg_leaves_per_tree": 23.065934065934066
+    }
+  },
+  "RF_TCGA_SMOTE_RFE": {
+    "relative_path": "TCGA No Infinium\\PKL\\RF_TCGA_SMOTE_RFE.pkl",
+    "group_folder": "TCGA No Infinium",
+    "cohort": "TCGA",
+    "infinium_purify": false,
+    "file_size_bytes": 16588726,
+    "file_size_mb": 15.82,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "rfe",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(k_neighbors=3, random_state=0)"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.2)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_features='log2', min_samples_split=5,\n                       n_estimators=218, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(k_neighbors=3, random_state=0)",
+      "rfe": "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.2)",
+      "rf": "RandomForestClassifier(max_features='log2', min_samples_split=5,\n                       n_estimators=218, random_state=0)",
+      "smote__k_neighbors": 3,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "rfe__estimator__bootstrap": true,
+      "rfe__estimator__ccp_alpha": 0.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__criterion": "gini",
+      "rfe__estimator__max_depth": null,
+      "rfe__estimator__max_features": "sqrt",
+      "rfe__estimator__max_leaf_nodes": null,
+      "rfe__estimator__max_samples": null,
+      "rfe__estimator__min_impurity_decrease": 0.0,
+      "rfe__estimator__min_samples_leaf": 1,
+      "rfe__estimator__min_samples_split": 2,
+      "rfe__estimator__min_weight_fraction_leaf": 0.0,
+      "rfe__estimator__monotonic_cst": null,
+      "rfe__estimator__n_estimators": 100,
+      "rfe__estimator__n_jobs": null,
+      "rfe__estimator__oob_score": false,
+      "rfe__estimator__random_state": 0,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator__warm_start": false,
+      "rfe__estimator": "RandomForestClassifier(random_state=0)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 100,
+      "rfe__step": 0.2,
+      "rfe__verbose": 0,
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": null,
+      "rf__max_features": "log2",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 1,
+      "rf__min_samples_split": 5,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 218,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "smote",
+    "sampler_params": {
+      "k_neighbors": 3,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "rfe_params": {
+      "estimator__bootstrap": true,
+      "estimator__ccp_alpha": 0.0,
+      "estimator__class_weight": null,
+      "estimator__criterion": "gini",
+      "estimator__max_depth": null,
+      "estimator__max_features": "sqrt",
+      "estimator__max_leaf_nodes": null,
+      "estimator__max_samples": null,
+      "estimator__min_impurity_decrease": 0.0,
+      "estimator__min_samples_leaf": 1,
+      "estimator__min_samples_split": 2,
+      "estimator__min_weight_fraction_leaf": 0.0,
+      "estimator__monotonic_cst": null,
+      "estimator__n_estimators": 100,
+      "estimator__n_jobs": null,
+      "estimator__oob_score": false,
+      "estimator__random_state": 0,
+      "estimator__verbose": 0,
+      "estimator__warm_start": false,
+      "estimator": "RandomForestClassifier(random_state=0)",
+      "importance_getter": "auto",
+      "n_features_to_select": 100,
+      "step": 0.2,
+      "verbose": 0
+    },
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 218,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 100,
+      "feature_importances_shape": [
+        100
+      ],
+      "feature_importances_sum": 0.9999999999999998,
+      "trained_tree_count": 218,
+      "total_nodes": 31592,
+      "avg_nodes_per_tree": 144.91743119266056,
+      "avg_tree_depth": 12.1651376146789,
+      "max_tree_depth": 22,
+      "avg_leaves_per_tree": 72.95871559633028
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 100,
+      "support_sum": 100,
+      "ranking_shape": [
+        19277
+      ]
+    }
+  },
+  "RF_TCGA_IP_IRUS_No_RFE": {
+    "relative_path": "TCGA with InfiniumPurify\\PKL\\RF_TCGA_IP_IRUS_No_RFE.pkl",
+    "group_folder": "TCGA with InfiniumPurify",
+    "cohort": "TCGA",
+    "infinium_purify": true,
+    "file_size_bytes": 1678182,
+    "file_size_mb": 1.6,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 75})"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=20, min_samples_split=7, n_estimators=181,\n                       random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 75})",
+      "rf": "RandomForestClassifier(max_depth=20, min_samples_split=7, n_estimators=181,\n                       random_state=0)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 75
+      },
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 20,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 1,
+      "rf__min_samples_split": 7,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 181,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "irus",
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": {
+        "LumA": 75
+      }
+    },
+    "rfe_params": null,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 20,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 7,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 181,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 19277,
+      "feature_importances_shape": [
+        19277
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 181,
+      "total_nodes": 9535,
+      "avg_nodes_per_tree": 52.67955801104972,
+      "avg_tree_depth": 8.497237569060774,
+      "max_tree_depth": 14,
+      "avg_leaves_per_tree": 26.83977900552486
+    }
+  },
+  "RF_TCGA_IP_IRUS_RFE": {
+    "relative_path": "TCGA with InfiniumPurify\\PKL\\RF_TCGA_IP_IRUS_RFE.pkl",
+    "group_folder": "TCGA with InfiniumPurify",
+    "cohort": "TCGA",
+    "infinium_purify": true,
+    "file_size_bytes": 2653174,
+    "file_size_mb": 2.53,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "rfe",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 75})"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=1000,\n    step=0.5)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=15, min_samples_split=8, n_estimators=178,\n                       random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 75})",
+      "rfe": "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=1000,\n    step=0.5)",
+      "rf": "RandomForestClassifier(max_depth=15, min_samples_split=8, n_estimators=178,\n                       random_state=0)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 75
+      },
+      "rfe__estimator__bootstrap": true,
+      "rfe__estimator__ccp_alpha": 0.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__criterion": "gini",
+      "rfe__estimator__max_depth": null,
+      "rfe__estimator__max_features": "sqrt",
+      "rfe__estimator__max_leaf_nodes": null,
+      "rfe__estimator__max_samples": null,
+      "rfe__estimator__min_impurity_decrease": 0.0,
+      "rfe__estimator__min_samples_leaf": 1,
+      "rfe__estimator__min_samples_split": 2,
+      "rfe__estimator__min_weight_fraction_leaf": 0.0,
+      "rfe__estimator__monotonic_cst": null,
+      "rfe__estimator__n_estimators": 100,
+      "rfe__estimator__n_jobs": null,
+      "rfe__estimator__oob_score": false,
+      "rfe__estimator__random_state": 0,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator__warm_start": false,
+      "rfe__estimator": "RandomForestClassifier(random_state=0)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 1000,
+      "rfe__step": 0.5,
+      "rfe__verbose": 0,
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 15,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 1,
+      "rf__min_samples_split": 8,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 178,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "irus",
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": {
+        "LumA": 75
+      }
+    },
+    "rfe_params": {
+      "estimator__bootstrap": true,
+      "estimator__ccp_alpha": 0.0,
+      "estimator__class_weight": null,
+      "estimator__criterion": "gini",
+      "estimator__max_depth": null,
+      "estimator__max_features": "sqrt",
+      "estimator__max_leaf_nodes": null,
+      "estimator__max_samples": null,
+      "estimator__min_impurity_decrease": 0.0,
+      "estimator__min_samples_leaf": 1,
+      "estimator__min_samples_split": 2,
+      "estimator__min_weight_fraction_leaf": 0.0,
+      "estimator__monotonic_cst": null,
+      "estimator__n_estimators": 100,
+      "estimator__n_jobs": null,
+      "estimator__oob_score": false,
+      "estimator__random_state": 0,
+      "estimator__verbose": 0,
+      "estimator__warm_start": false,
+      "estimator": "RandomForestClassifier(random_state=0)",
+      "importance_getter": "auto",
+      "n_features_to_select": 1000,
+      "step": 0.5,
+      "verbose": 0
+    },
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 15,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 8,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 178,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 1000,
+      "feature_importances_shape": [
+        1000
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 178,
+      "total_nodes": 9306,
+      "avg_nodes_per_tree": 52.28089887640449,
+      "avg_tree_depth": 8.674157303370787,
+      "max_tree_depth": 14,
+      "avg_leaves_per_tree": 26.640449438202246
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 1000,
+      "support_sum": 1000,
+      "ranking_shape": [
+        19277
+      ]
+    }
+  },
+  "RF_TCGA_IP_NoImb_No_RFE": {
+    "relative_path": "TCGA with InfiniumPurify\\PKL\\RF_TCGA_IP_NoImb_No_RFE.pkl",
+    "group_folder": "TCGA with InfiniumPurify",
+    "cohort": "TCGA",
+    "infinium_purify": true,
+    "file_size_bytes": 2057238,
+    "file_size_mb": 1.96,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=30, min_samples_leaf=3, min_samples_split=5,\n                       n_estimators=224, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "rf": "RandomForestClassifier(max_depth=30, min_samples_leaf=3, min_samples_split=5,\n                       n_estimators=224, random_state=0)",
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 30,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 3,
+      "rf__min_samples_split": 5,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 224,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": null,
+    "sampler_params": null,
+    "rfe_params": null,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 30,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 3,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 224,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 19277,
+      "feature_importances_shape": [
+        19277
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 224,
+      "total_nodes": 15942,
+      "avg_nodes_per_tree": 71.16964285714286,
+      "avg_tree_depth": 10.6875,
+      "max_tree_depth": 16,
+      "avg_leaves_per_tree": 36.08482142857143
+    }
+  },
+  "RF_TCGA_IP_NoImb_RFE": {
+    "relative_path": "TCGA with InfiniumPurify\\PKL\\RF_TCGA_IP_NoImb_RFE.pkl",
+    "group_folder": "TCGA with InfiniumPurify",
+    "cohort": "TCGA",
+    "infinium_purify": true,
+    "file_size_bytes": 4048966,
+    "file_size_mb": 3.86,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "rfe",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "rfe",
+          "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.25)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=25, max_features='log2', min_samples_split=4,\n                       n_estimators=212, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "rfe": "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.25)",
+      "rf": "RandomForestClassifier(max_depth=25, max_features='log2', min_samples_split=4,\n                       n_estimators=212, random_state=0)",
+      "rfe__estimator__bootstrap": true,
+      "rfe__estimator__ccp_alpha": 0.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__criterion": "gini",
+      "rfe__estimator__max_depth": null,
+      "rfe__estimator__max_features": "sqrt",
+      "rfe__estimator__max_leaf_nodes": null,
+      "rfe__estimator__max_samples": null,
+      "rfe__estimator__min_impurity_decrease": 0.0,
+      "rfe__estimator__min_samples_leaf": 1,
+      "rfe__estimator__min_samples_split": 2,
+      "rfe__estimator__min_weight_fraction_leaf": 0.0,
+      "rfe__estimator__monotonic_cst": null,
+      "rfe__estimator__n_estimators": 100,
+      "rfe__estimator__n_jobs": null,
+      "rfe__estimator__oob_score": false,
+      "rfe__estimator__random_state": 0,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator__warm_start": false,
+      "rfe__estimator": "RandomForestClassifier(random_state=0)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 100,
+      "rfe__step": 0.25,
+      "rfe__verbose": 0,
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 25,
+      "rf__max_features": "log2",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 1,
+      "rf__min_samples_split": 4,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 212,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": null,
+    "sampler_params": null,
+    "rfe_params": {
+      "estimator__bootstrap": true,
+      "estimator__ccp_alpha": 0.0,
+      "estimator__class_weight": null,
+      "estimator__criterion": "gini",
+      "estimator__max_depth": null,
+      "estimator__max_features": "sqrt",
+      "estimator__max_leaf_nodes": null,
+      "estimator__max_samples": null,
+      "estimator__min_impurity_decrease": 0.0,
+      "estimator__min_samples_leaf": 1,
+      "estimator__min_samples_split": 2,
+      "estimator__min_weight_fraction_leaf": 0.0,
+      "estimator__monotonic_cst": null,
+      "estimator__n_estimators": 100,
+      "estimator__n_jobs": null,
+      "estimator__oob_score": false,
+      "estimator__random_state": 0,
+      "estimator__verbose": 0,
+      "estimator__warm_start": false,
+      "estimator": "RandomForestClassifier(random_state=0)",
+      "importance_getter": "auto",
+      "n_features_to_select": 100,
+      "step": 0.25,
+      "verbose": 0
+    },
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 25,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 4,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 212,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 100,
+      "feature_importances_shape": [
+        100
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 212,
+      "total_nodes": 21908,
+      "avg_nodes_per_tree": 103.33962264150944,
+      "avg_tree_depth": 11.952830188679245,
+      "max_tree_depth": 17,
+      "avg_leaves_per_tree": 52.16981132075472
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 100,
+      "support_sum": 100,
+      "ranking_shape": [
+        19277
+      ]
+    }
+  },
+  "RF_TCGA_IP_SMOTE_No_RFE": {
+    "relative_path": "TCGA with InfiniumPurify\\PKL\\RF_TCGA_IP_SMOTE_No_RFE.pkl",
+    "group_folder": "TCGA with InfiniumPurify",
+    "cohort": "TCGA",
+    "infinium_purify": true,
+    "file_size_bytes": 11721974,
+    "file_size_mb": 11.18,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(k_neighbors=7, random_state=0)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=5, min_samples_leaf=4, min_samples_split=8,\n                       n_estimators=91, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(k_neighbors=7, random_state=0)",
+      "rf": "RandomForestClassifier(max_depth=5, min_samples_leaf=4, min_samples_split=8,\n                       n_estimators=91, random_state=0)",
+      "smote__k_neighbors": 7,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 5,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 4,
+      "rf__min_samples_split": 8,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 91,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "smote",
+    "sampler_params": {
+      "k_neighbors": 7,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "rfe_params": null,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 5,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 4,
+      "min_samples_split": 8,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 91,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 19277,
+      "feature_importances_shape": [
+        19277
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 91,
+      "total_nodes": 4183,
+      "avg_nodes_per_tree": 45.967032967032964,
+      "avg_tree_depth": 5.0,
+      "max_tree_depth": 5,
+      "avg_leaves_per_tree": 23.483516483516482
+    }
+  },
+  "RF_TCGA_IP_SMOTE_RFE": {
+    "relative_path": "TCGA with InfiniumPurify\\PKL\\RF_TCGA_IP_SMOTE_RFE.pkl",
+    "group_folder": "TCGA with InfiniumPurify",
+    "cohort": "TCGA",
+    "infinium_purify": true,
+    "file_size_bytes": 15282006,
+    "file_size_mb": 14.57,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "rfe",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(k_neighbors=3, random_state=0)"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.2)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=20, max_features='log2', min_samples_leaf=4,\n                       min_samples_split=6, n_estimators=181, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(k_neighbors=3, random_state=0)",
+      "rfe": "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.2)",
+      "rf": "RandomForestClassifier(max_depth=20, max_features='log2', min_samples_leaf=4,\n                       min_samples_split=6, n_estimators=181, random_state=0)",
+      "smote__k_neighbors": 3,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "rfe__estimator__bootstrap": true,
+      "rfe__estimator__ccp_alpha": 0.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__criterion": "gini",
+      "rfe__estimator__max_depth": null,
+      "rfe__estimator__max_features": "sqrt",
+      "rfe__estimator__max_leaf_nodes": null,
+      "rfe__estimator__max_samples": null,
+      "rfe__estimator__min_impurity_decrease": 0.0,
+      "rfe__estimator__min_samples_leaf": 1,
+      "rfe__estimator__min_samples_split": 2,
+      "rfe__estimator__min_weight_fraction_leaf": 0.0,
+      "rfe__estimator__monotonic_cst": null,
+      "rfe__estimator__n_estimators": 100,
+      "rfe__estimator__n_jobs": null,
+      "rfe__estimator__oob_score": false,
+      "rfe__estimator__random_state": 0,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator__warm_start": false,
+      "rfe__estimator": "RandomForestClassifier(random_state=0)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 100,
+      "rfe__step": 0.2,
+      "rfe__verbose": 0,
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 20,
+      "rf__max_features": "log2",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 4,
+      "rf__min_samples_split": 6,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 181,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "smote",
+    "sampler_params": {
+      "k_neighbors": 3,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "rfe_params": {
+      "estimator__bootstrap": true,
+      "estimator__ccp_alpha": 0.0,
+      "estimator__class_weight": null,
+      "estimator__criterion": "gini",
+      "estimator__max_depth": null,
+      "estimator__max_features": "sqrt",
+      "estimator__max_leaf_nodes": null,
+      "estimator__max_samples": null,
+      "estimator__min_impurity_decrease": 0.0,
+      "estimator__min_samples_leaf": 1,
+      "estimator__min_samples_split": 2,
+      "estimator__min_weight_fraction_leaf": 0.0,
+      "estimator__monotonic_cst": null,
+      "estimator__n_estimators": 100,
+      "estimator__n_jobs": null,
+      "estimator__oob_score": false,
+      "estimator__random_state": 0,
+      "estimator__verbose": 0,
+      "estimator__warm_start": false,
+      "estimator": "RandomForestClassifier(random_state=0)",
+      "importance_getter": "auto",
+      "n_features_to_select": 100,
+      "step": 0.2,
+      "verbose": 0
+    },
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 20,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 4,
+      "min_samples_split": 6,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 181,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 100,
+      "feature_importances_shape": [
+        100
+      ],
+      "feature_importances_sum": 1.0000000000000002,
+      "trained_tree_count": 181,
+      "total_nodes": 20759,
+      "avg_nodes_per_tree": 114.69060773480663,
+      "avg_tree_depth": 11.005524861878452,
+      "max_tree_depth": 15,
+      "avg_leaves_per_tree": 57.84530386740332
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 100,
+      "support_sum": 100,
+      "ranking_shape": [
+        19277
+      ]
+    }
+  },
+  "RF_Norway_IRUS_No_RFE": {
+    "relative_path": "Norway No Infinium\\PKL\\RF_Norway_IRUS_No_RFE.pkl",
+    "group_folder": "Norway No Infinium",
+    "cohort": "Norway",
+    "infinium_purify": false,
+    "file_size_bytes": 1312150,
+    "file_size_mb": 1.25,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 30})"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=20, min_samples_split=7, n_estimators=181,\n                       random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 30})",
+      "rf": "RandomForestClassifier(max_depth=20, min_samples_split=7, n_estimators=181,\n                       random_state=0)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 30
+      },
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 20,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 1,
+      "rf__min_samples_split": 7,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 181,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "irus",
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": {
+        "LumA": 30
+      }
+    },
+    "rfe_params": null,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 20,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 7,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 181,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 20789,
+      "feature_importances_shape": [
+        20789
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 181,
+      "total_nodes": 5549,
+      "avg_nodes_per_tree": 30.65745856353591,
+      "avg_tree_depth": 6.569060773480663,
+      "max_tree_depth": 10,
+      "avg_leaves_per_tree": 15.828729281767956
+    }
+  },
+  "RF_Norway_IRUS_RFE": {
+    "relative_path": "Norway No Infinium\\PKL\\RF_Norway_IRUS_RFE.pkl",
+    "group_folder": "Norway No Infinium",
+    "cohort": "Norway",
+    "infinium_purify": false,
+    "file_size_bytes": 2072390,
+    "file_size_mb": 1.98,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "rfe",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 30})"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.5)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(min_samples_split=5, n_estimators=145, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 30})",
+      "rfe": "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.5)",
+      "rf": "RandomForestClassifier(min_samples_split=5, n_estimators=145, random_state=0)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 30
+      },
+      "rfe__estimator__bootstrap": true,
+      "rfe__estimator__ccp_alpha": 0.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__criterion": "gini",
+      "rfe__estimator__max_depth": null,
+      "rfe__estimator__max_features": "sqrt",
+      "rfe__estimator__max_leaf_nodes": null,
+      "rfe__estimator__max_samples": null,
+      "rfe__estimator__min_impurity_decrease": 0.0,
+      "rfe__estimator__min_samples_leaf": 1,
+      "rfe__estimator__min_samples_split": 2,
+      "rfe__estimator__min_weight_fraction_leaf": 0.0,
+      "rfe__estimator__monotonic_cst": null,
+      "rfe__estimator__n_estimators": 100,
+      "rfe__estimator__n_jobs": null,
+      "rfe__estimator__oob_score": false,
+      "rfe__estimator__random_state": 0,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator__warm_start": false,
+      "rfe__estimator": "RandomForestClassifier(random_state=0)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 100,
+      "rfe__step": 0.5,
+      "rfe__verbose": 0,
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": null,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 1,
+      "rf__min_samples_split": 5,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 145,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "irus",
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": {
+        "LumA": 30
+      }
+    },
+    "rfe_params": {
+      "estimator__bootstrap": true,
+      "estimator__ccp_alpha": 0.0,
+      "estimator__class_weight": null,
+      "estimator__criterion": "gini",
+      "estimator__max_depth": null,
+      "estimator__max_features": "sqrt",
+      "estimator__max_leaf_nodes": null,
+      "estimator__max_samples": null,
+      "estimator__min_impurity_decrease": 0.0,
+      "estimator__min_samples_leaf": 1,
+      "estimator__min_samples_split": 2,
+      "estimator__min_weight_fraction_leaf": 0.0,
+      "estimator__monotonic_cst": null,
+      "estimator__n_estimators": 100,
+      "estimator__n_jobs": null,
+      "estimator__oob_score": false,
+      "estimator__random_state": 0,
+      "estimator__verbose": 0,
+      "estimator__warm_start": false,
+      "estimator": "RandomForestClassifier(random_state=0)",
+      "importance_getter": "auto",
+      "n_features_to_select": 100,
+      "step": 0.5,
+      "verbose": 0
+    },
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 145,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 100,
+      "feature_importances_shape": [
+        100
+      ],
+      "feature_importances_sum": 0.9999999999999999,
+      "trained_tree_count": 145,
+      "total_nodes": 5657,
+      "avg_nodes_per_tree": 39.01379310344828,
+      "avg_tree_depth": 7.524137931034483,
+      "max_tree_depth": 12,
+      "avg_leaves_per_tree": 20.00689655172414
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 100,
+      "support_sum": 100,
+      "ranking_shape": [
+        20789
+      ]
+    }
+  },
+  "RF_Norway_NoImb_No_RFE": {
+    "relative_path": "Norway No Infinium\\PKL\\RF_Norway_NoImb_No_RFE.pkl",
+    "group_folder": "Norway No Infinium",
+    "cohort": "Norway",
+    "infinium_purify": false,
+    "file_size_bytes": 917174,
+    "file_size_mb": 0.87,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=15, min_samples_leaf=2, min_samples_split=4,\n                       n_estimators=112, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "rf": "RandomForestClassifier(max_depth=15, min_samples_leaf=2, min_samples_split=4,\n                       n_estimators=112, random_state=0)",
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 15,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 2,
+      "rf__min_samples_split": 4,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 112,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": null,
+    "sampler_params": null,
+    "rfe_params": null,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 15,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 4,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 112,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 20789,
+      "feature_importances_shape": [
+        20789
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 112,
+      "total_nodes": 5196,
+      "avg_nodes_per_tree": 46.392857142857146,
+      "avg_tree_depth": 8.178571428571429,
+      "max_tree_depth": 11,
+      "avg_leaves_per_tree": 23.696428571428573
+    }
+  },
+  "RF_Norway_NoImb_RFE": {
+    "relative_path": "Norway No Infinium\\PKL\\RF_Norway_NoImb_RFE.pkl",
+    "group_folder": "Norway No Infinium",
+    "cohort": "Norway",
+    "infinium_purify": false,
+    "file_size_bytes": 2103718,
+    "file_size_mb": 2.01,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "rfe",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "rfe",
+          "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.5)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=20, min_samples_leaf=2, min_samples_split=5,\n                       n_estimators=153, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "rfe": "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.5)",
+      "rf": "RandomForestClassifier(max_depth=20, min_samples_leaf=2, min_samples_split=5,\n                       n_estimators=153, random_state=0)",
+      "rfe__estimator__bootstrap": true,
+      "rfe__estimator__ccp_alpha": 0.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__criterion": "gini",
+      "rfe__estimator__max_depth": null,
+      "rfe__estimator__max_features": "sqrt",
+      "rfe__estimator__max_leaf_nodes": null,
+      "rfe__estimator__max_samples": null,
+      "rfe__estimator__min_impurity_decrease": 0.0,
+      "rfe__estimator__min_samples_leaf": 1,
+      "rfe__estimator__min_samples_split": 2,
+      "rfe__estimator__min_weight_fraction_leaf": 0.0,
+      "rfe__estimator__monotonic_cst": null,
+      "rfe__estimator__n_estimators": 100,
+      "rfe__estimator__n_jobs": null,
+      "rfe__estimator__oob_score": false,
+      "rfe__estimator__random_state": 0,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator__warm_start": false,
+      "rfe__estimator": "RandomForestClassifier(random_state=0)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 100,
+      "rfe__step": 0.5,
+      "rfe__verbose": 0,
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 20,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 2,
+      "rf__min_samples_split": 5,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 153,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": null,
+    "sampler_params": null,
+    "rfe_params": {
+      "estimator__bootstrap": true,
+      "estimator__ccp_alpha": 0.0,
+      "estimator__class_weight": null,
+      "estimator__criterion": "gini",
+      "estimator__max_depth": null,
+      "estimator__max_features": "sqrt",
+      "estimator__max_leaf_nodes": null,
+      "estimator__max_samples": null,
+      "estimator__min_impurity_decrease": 0.0,
+      "estimator__min_samples_leaf": 1,
+      "estimator__min_samples_split": 2,
+      "estimator__min_weight_fraction_leaf": 0.0,
+      "estimator__monotonic_cst": null,
+      "estimator__n_estimators": 100,
+      "estimator__n_jobs": null,
+      "estimator__oob_score": false,
+      "estimator__random_state": 0,
+      "estimator__verbose": 0,
+      "estimator__warm_start": false,
+      "estimator": "RandomForestClassifier(random_state=0)",
+      "importance_getter": "auto",
+      "n_features_to_select": 100,
+      "step": 0.5,
+      "verbose": 0
+    },
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 20,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 153,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 100,
+      "feature_importances_shape": [
+        100
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 153,
+      "total_nodes": 7439,
+      "avg_nodes_per_tree": 48.62091503267974,
+      "avg_tree_depth": 8.830065359477125,
+      "max_tree_depth": 12,
+      "avg_leaves_per_tree": 24.81045751633987
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 100,
+      "support_sum": 100,
+      "ranking_shape": [
+        20789
+      ]
+    }
+  },
+  "RF_Norway_SMOTE_No_RFE": {
+    "relative_path": "Norway No Infinium\\PKL\\RF_Norway_SMOTE_No_RFE.pkl",
+    "group_folder": "Norway No Infinium",
+    "cohort": "Norway",
+    "infinium_purify": false,
+    "file_size_bytes": 4143910,
+    "file_size_mb": 3.95,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(random_state=0)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=25, min_samples_split=6, n_estimators=245,\n                       random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(random_state=0)",
+      "rf": "RandomForestClassifier(max_depth=25, min_samples_split=6, n_estimators=245,\n                       random_state=0)",
+      "smote__k_neighbors": 5,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 25,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 1,
+      "rf__min_samples_split": 6,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 245,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "smote",
+    "sampler_params": {
+      "k_neighbors": 5,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "rfe_params": null,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 25,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 6,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 245,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 20789,
+      "feature_importances_shape": [
+        20789
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 245,
+      "total_nodes": 16533,
+      "avg_nodes_per_tree": 67.48163265306123,
+      "avg_tree_depth": 8.93061224489796,
+      "max_tree_depth": 13,
+      "avg_leaves_per_tree": 34.24081632653061
+    }
+  },
+  "RF_Norway_SMOTE_RFE": {
+    "relative_path": "Norway No Infinium\\PKL\\RF_Norway_SMOTE_RFE.pkl",
+    "group_folder": "Norway No Infinium",
+    "cohort": "Norway",
+    "infinium_purify": false,
+    "file_size_bytes": 5053238,
+    "file_size_mb": 4.82,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "rfe",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(random_state=0)"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=500,\n    step=0.5)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(min_samples_leaf=4, n_estimators=227, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(random_state=0)",
+      "rfe": "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=500,\n    step=0.5)",
+      "rf": "RandomForestClassifier(min_samples_leaf=4, n_estimators=227, random_state=0)",
+      "smote__k_neighbors": 5,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "rfe__estimator__bootstrap": true,
+      "rfe__estimator__ccp_alpha": 0.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__criterion": "gini",
+      "rfe__estimator__max_depth": null,
+      "rfe__estimator__max_features": "sqrt",
+      "rfe__estimator__max_leaf_nodes": null,
+      "rfe__estimator__max_samples": null,
+      "rfe__estimator__min_impurity_decrease": 0.0,
+      "rfe__estimator__min_samples_leaf": 1,
+      "rfe__estimator__min_samples_split": 2,
+      "rfe__estimator__min_weight_fraction_leaf": 0.0,
+      "rfe__estimator__monotonic_cst": null,
+      "rfe__estimator__n_estimators": 100,
+      "rfe__estimator__n_jobs": null,
+      "rfe__estimator__oob_score": false,
+      "rfe__estimator__random_state": 0,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator__warm_start": false,
+      "rfe__estimator": "RandomForestClassifier(random_state=0)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 500,
+      "rfe__step": 0.5,
+      "rfe__verbose": 0,
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": null,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 4,
+      "rf__min_samples_split": 2,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 227,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "smote",
+    "sampler_params": {
+      "k_neighbors": 5,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "rfe_params": {
+      "estimator__bootstrap": true,
+      "estimator__ccp_alpha": 0.0,
+      "estimator__class_weight": null,
+      "estimator__criterion": "gini",
+      "estimator__max_depth": null,
+      "estimator__max_features": "sqrt",
+      "estimator__max_leaf_nodes": null,
+      "estimator__max_samples": null,
+      "estimator__min_impurity_decrease": 0.0,
+      "estimator__min_samples_leaf": 1,
+      "estimator__min_samples_split": 2,
+      "estimator__min_weight_fraction_leaf": 0.0,
+      "estimator__monotonic_cst": null,
+      "estimator__n_estimators": 100,
+      "estimator__n_jobs": null,
+      "estimator__oob_score": false,
+      "estimator__random_state": 0,
+      "estimator__verbose": 0,
+      "estimator__warm_start": false,
+      "estimator": "RandomForestClassifier(random_state=0)",
+      "importance_getter": "auto",
+      "n_features_to_select": 500,
+      "step": 0.5,
+      "verbose": 0
+    },
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 4,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 227,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 500,
+      "feature_importances_shape": [
+        500
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 227,
+      "total_nodes": 13883,
+      "avg_nodes_per_tree": 61.158590308370044,
+      "avg_tree_depth": 8.797356828193832,
+      "max_tree_depth": 13,
+      "avg_leaves_per_tree": 31.079295154185022
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 500,
+      "support_sum": 500,
+      "ranking_shape": [
+        20789
+      ]
+    }
+  },
+  "RF_Norway_IP_IRUS_No_RFE": {
+    "relative_path": "Norway with InfiniumPurify\\PKL\\RF_Norway_IP_IRUS_No_RFE.pkl",
+    "group_folder": "Norway with InfiniumPurify",
+    "cohort": "Norway",
+    "infinium_purify": true,
+    "file_size_bytes": 915702,
+    "file_size_mb": 0.87,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 36})"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=15, min_samples_leaf=3, min_samples_split=5,\n                       n_estimators=63, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 36})",
+      "rf": "RandomForestClassifier(max_depth=15, min_samples_leaf=3, min_samples_split=5,\n                       n_estimators=63, random_state=0)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 36
+      },
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 15,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 3,
+      "rf__min_samples_split": 5,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 63,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "irus",
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": {
+        "LumA": 36
+      }
+    },
+    "rfe_params": null,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 15,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 3,
+      "min_samples_split": 5,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 63,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 21101,
+      "feature_importances_shape": [
+        21101
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 63,
+      "total_nodes": 2119,
+      "avg_nodes_per_tree": 33.63492063492063,
+      "avg_tree_depth": 6.634920634920635,
+      "max_tree_depth": 9,
+      "avg_leaves_per_tree": 17.317460317460316
+    }
+  },
+  "RF_Norway_IP_IRUS_RFE": {
+    "relative_path": "Norway with InfiniumPurify\\PKL\\RF_Norway_IP_IRUS_RFE.pkl",
+    "group_folder": "Norway with InfiniumPurify",
+    "cohort": "Norway",
+    "infinium_purify": true,
+    "file_size_bytes": 2665606,
+    "file_size_mb": 2.54,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "rfe",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 36})"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.25)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=25, max_features='log2', min_samples_leaf=3,\n                       min_samples_split=3, n_estimators=258, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0, sampling_strategy={'LumA': 36})",
+      "rfe": "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.25)",
+      "rf": "RandomForestClassifier(max_depth=25, max_features='log2', min_samples_leaf=3,\n                       min_samples_split=3, n_estimators=258, random_state=0)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 36
+      },
+      "rfe__estimator__bootstrap": true,
+      "rfe__estimator__ccp_alpha": 0.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__criterion": "gini",
+      "rfe__estimator__max_depth": null,
+      "rfe__estimator__max_features": "sqrt",
+      "rfe__estimator__max_leaf_nodes": null,
+      "rfe__estimator__max_samples": null,
+      "rfe__estimator__min_impurity_decrease": 0.0,
+      "rfe__estimator__min_samples_leaf": 1,
+      "rfe__estimator__min_samples_split": 2,
+      "rfe__estimator__min_weight_fraction_leaf": 0.0,
+      "rfe__estimator__monotonic_cst": null,
+      "rfe__estimator__n_estimators": 100,
+      "rfe__estimator__n_jobs": null,
+      "rfe__estimator__oob_score": false,
+      "rfe__estimator__random_state": 0,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator__warm_start": false,
+      "rfe__estimator": "RandomForestClassifier(random_state=0)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 100,
+      "rfe__step": 0.25,
+      "rfe__verbose": 0,
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 25,
+      "rf__max_features": "log2",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 3,
+      "rf__min_samples_split": 3,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 258,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "irus",
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": {
+        "LumA": 36
+      }
+    },
+    "rfe_params": {
+      "estimator__bootstrap": true,
+      "estimator__ccp_alpha": 0.0,
+      "estimator__class_weight": null,
+      "estimator__criterion": "gini",
+      "estimator__max_depth": null,
+      "estimator__max_features": "sqrt",
+      "estimator__max_leaf_nodes": null,
+      "estimator__max_samples": null,
+      "estimator__min_impurity_decrease": 0.0,
+      "estimator__min_samples_leaf": 1,
+      "estimator__min_samples_split": 2,
+      "estimator__min_weight_fraction_leaf": 0.0,
+      "estimator__monotonic_cst": null,
+      "estimator__n_estimators": 100,
+      "estimator__n_jobs": null,
+      "estimator__oob_score": false,
+      "estimator__random_state": 0,
+      "estimator__verbose": 0,
+      "estimator__warm_start": false,
+      "estimator": "RandomForestClassifier(random_state=0)",
+      "importance_getter": "auto",
+      "n_features_to_select": 100,
+      "step": 0.25,
+      "verbose": 0
+    },
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 25,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 3,
+      "min_samples_split": 3,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 258,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 100,
+      "feature_importances_shape": [
+        100
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 258,
+      "total_nodes": 10158,
+      "avg_nodes_per_tree": 39.372093023255815,
+      "avg_tree_depth": 7.267441860465116,
+      "max_tree_depth": 10,
+      "avg_leaves_per_tree": 20.186046511627907
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 100,
+      "support_sum": 100,
+      "ranking_shape": [
+        21101
+      ]
+    }
+  },
+  "RF_Norway_IP_NoImb_No_RFE": {
+    "relative_path": "Norway with InfiniumPurify\\PKL\\RF_Norway_IP_NoImb_No_RFE.pkl",
+    "group_folder": "Norway with InfiniumPurify",
+    "cohort": "Norway",
+    "infinium_purify": true,
+    "file_size_bytes": 968950,
+    "file_size_mb": 0.92,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=15, min_samples_leaf=2, min_samples_split=8,\n                       n_estimators=146, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "rf": "RandomForestClassifier(max_depth=15, min_samples_leaf=2, min_samples_split=8,\n                       n_estimators=146, random_state=0)",
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 15,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 2,
+      "rf__min_samples_split": 8,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 146,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": null,
+    "sampler_params": null,
+    "rfe_params": null,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 15,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 8,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 146,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 21101,
+      "feature_importances_shape": [
+        21101
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 146,
+      "total_nodes": 5506,
+      "avg_nodes_per_tree": 37.71232876712329,
+      "avg_tree_depth": 8.205479452054794,
+      "max_tree_depth": 12,
+      "avg_leaves_per_tree": 19.356164383561644
+    }
+  },
+  "RF_Norway_IP_NoImb_RFE": {
+    "relative_path": "Norway with InfiniumPurify\\PKL\\RF_Norway_IP_NoImb_RFE.pkl",
+    "group_folder": "Norway with InfiniumPurify",
+    "cohort": "Norway",
+    "infinium_purify": true,
+    "file_size_bytes": 2713718,
+    "file_size_mb": 2.59,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "rfe",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "rfe",
+          "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.25)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=25, max_features='log2', min_samples_leaf=3,\n                       min_samples_split=3, n_estimators=258, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "rfe": "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=100,\n    step=0.25)",
+      "rf": "RandomForestClassifier(max_depth=25, max_features='log2', min_samples_leaf=3,\n                       min_samples_split=3, n_estimators=258, random_state=0)",
+      "rfe__estimator__bootstrap": true,
+      "rfe__estimator__ccp_alpha": 0.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__criterion": "gini",
+      "rfe__estimator__max_depth": null,
+      "rfe__estimator__max_features": "sqrt",
+      "rfe__estimator__max_leaf_nodes": null,
+      "rfe__estimator__max_samples": null,
+      "rfe__estimator__min_impurity_decrease": 0.0,
+      "rfe__estimator__min_samples_leaf": 1,
+      "rfe__estimator__min_samples_split": 2,
+      "rfe__estimator__min_weight_fraction_leaf": 0.0,
+      "rfe__estimator__monotonic_cst": null,
+      "rfe__estimator__n_estimators": 100,
+      "rfe__estimator__n_jobs": null,
+      "rfe__estimator__oob_score": false,
+      "rfe__estimator__random_state": 0,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator__warm_start": false,
+      "rfe__estimator": "RandomForestClassifier(random_state=0)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 100,
+      "rfe__step": 0.25,
+      "rfe__verbose": 0,
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 25,
+      "rf__max_features": "log2",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 3,
+      "rf__min_samples_split": 3,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 258,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": null,
+    "sampler_params": null,
+    "rfe_params": {
+      "estimator__bootstrap": true,
+      "estimator__ccp_alpha": 0.0,
+      "estimator__class_weight": null,
+      "estimator__criterion": "gini",
+      "estimator__max_depth": null,
+      "estimator__max_features": "sqrt",
+      "estimator__max_leaf_nodes": null,
+      "estimator__max_samples": null,
+      "estimator__min_impurity_decrease": 0.0,
+      "estimator__min_samples_leaf": 1,
+      "estimator__min_samples_split": 2,
+      "estimator__min_weight_fraction_leaf": 0.0,
+      "estimator__monotonic_cst": null,
+      "estimator__n_estimators": 100,
+      "estimator__n_jobs": null,
+      "estimator__oob_score": false,
+      "estimator__random_state": 0,
+      "estimator__verbose": 0,
+      "estimator__warm_start": false,
+      "estimator": "RandomForestClassifier(random_state=0)",
+      "importance_getter": "auto",
+      "n_features_to_select": 100,
+      "step": 0.25,
+      "verbose": 0
+    },
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 25,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 3,
+      "min_samples_split": 3,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 258,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 100,
+      "feature_importances_shape": [
+        100
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 258,
+      "total_nodes": 12550,
+      "avg_nodes_per_tree": 48.64341085271318,
+      "avg_tree_depth": 8.7015503875969,
+      "max_tree_depth": 13,
+      "avg_leaves_per_tree": 24.82170542635659
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 100,
+      "support_sum": 100,
+      "ranking_shape": [
+        21101
+      ]
+    }
+  },
+  "RF_Norway_IP_SMOTE_No_RFE": {
+    "relative_path": "Norway with InfiniumPurify\\PKL\\RF_Norway_IP_SMOTE_No_RFE.pkl",
+    "group_folder": "Norway with InfiniumPurify",
+    "cohort": "Norway",
+    "infinium_purify": true,
+    "file_size_bytes": 4877430,
+    "file_size_mb": 4.65,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(random_state=0)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=25, min_samples_split=6, n_estimators=245,\n                       random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(random_state=0)",
+      "rf": "RandomForestClassifier(max_depth=25, min_samples_split=6, n_estimators=245,\n                       random_state=0)",
+      "smote__k_neighbors": 5,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 25,
+      "rf__max_features": "sqrt",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 1,
+      "rf__min_samples_split": 6,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 245,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "smote",
+    "sampler_params": {
+      "k_neighbors": 5,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "rfe_params": null,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 25,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 6,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 245,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 21101,
+      "feature_importances_shape": [
+        21101
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 245,
+      "total_nodes": 16755,
+      "avg_nodes_per_tree": 68.38775510204081,
+      "avg_tree_depth": 8.979591836734693,
+      "max_tree_depth": 13,
+      "avg_leaves_per_tree": 34.69387755102041
+    }
+  },
+  "RF_Norway_IP_SMOTE_RFE": {
+    "relative_path": "Norway with InfiniumPurify\\PKL\\RF_Norway_IP_SMOTE_RFE.pkl",
+    "group_folder": "Norway with InfiniumPurify",
+    "cohort": "Norway",
+    "infinium_purify": true,
+    "file_size_bytes": 5920166,
+    "file_size_mb": 5.65,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "rfe",
+      "rf"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(k_neighbors=7, random_state=0)"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=500,\n    step=0.2)"
+        ],
+        [
+          "rf",
+          "RandomForestClassifier(max_depth=10, max_features='log2', min_samples_split=9,\n                       n_estimators=199, random_state=0)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(k_neighbors=7, random_state=0)",
+      "rfe": "RFE(estimator=RandomForestClassifier(random_state=0), n_features_to_select=500,\n    step=0.2)",
+      "rf": "RandomForestClassifier(max_depth=10, max_features='log2', min_samples_split=9,\n                       n_estimators=199, random_state=0)",
+      "smote__k_neighbors": 7,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "rfe__estimator__bootstrap": true,
+      "rfe__estimator__ccp_alpha": 0.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__criterion": "gini",
+      "rfe__estimator__max_depth": null,
+      "rfe__estimator__max_features": "sqrt",
+      "rfe__estimator__max_leaf_nodes": null,
+      "rfe__estimator__max_samples": null,
+      "rfe__estimator__min_impurity_decrease": 0.0,
+      "rfe__estimator__min_samples_leaf": 1,
+      "rfe__estimator__min_samples_split": 2,
+      "rfe__estimator__min_weight_fraction_leaf": 0.0,
+      "rfe__estimator__monotonic_cst": null,
+      "rfe__estimator__n_estimators": 100,
+      "rfe__estimator__n_jobs": null,
+      "rfe__estimator__oob_score": false,
+      "rfe__estimator__random_state": 0,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator__warm_start": false,
+      "rfe__estimator": "RandomForestClassifier(random_state=0)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 500,
+      "rfe__step": 0.2,
+      "rfe__verbose": 0,
+      "rf__bootstrap": true,
+      "rf__ccp_alpha": 0.0,
+      "rf__class_weight": null,
+      "rf__criterion": "gini",
+      "rf__max_depth": 10,
+      "rf__max_features": "log2",
+      "rf__max_leaf_nodes": null,
+      "rf__max_samples": null,
+      "rf__min_impurity_decrease": 0.0,
+      "rf__min_samples_leaf": 1,
+      "rf__min_samples_split": 9,
+      "rf__min_weight_fraction_leaf": 0.0,
+      "rf__monotonic_cst": null,
+      "rf__n_estimators": 199,
+      "rf__n_jobs": null,
+      "rf__oob_score": false,
+      "rf__random_state": 0,
+      "rf__verbose": 0,
+      "rf__warm_start": false
+    },
+    "sampler_name": "smote",
+    "sampler_params": {
+      "k_neighbors": 7,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "rfe_params": {
+      "estimator__bootstrap": true,
+      "estimator__ccp_alpha": 0.0,
+      "estimator__class_weight": null,
+      "estimator__criterion": "gini",
+      "estimator__max_depth": null,
+      "estimator__max_features": "sqrt",
+      "estimator__max_leaf_nodes": null,
+      "estimator__max_samples": null,
+      "estimator__min_impurity_decrease": 0.0,
+      "estimator__min_samples_leaf": 1,
+      "estimator__min_samples_split": 2,
+      "estimator__min_weight_fraction_leaf": 0.0,
+      "estimator__monotonic_cst": null,
+      "estimator__n_estimators": 100,
+      "estimator__n_jobs": null,
+      "estimator__oob_score": false,
+      "estimator__random_state": 0,
+      "estimator__verbose": 0,
+      "estimator__warm_start": false,
+      "estimator": "RandomForestClassifier(random_state=0)",
+      "importance_getter": "auto",
+      "n_features_to_select": 500,
+      "step": 0.2,
+      "verbose": 0
+    },
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 10,
+      "max_features": "log2",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 9,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 199,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 0,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_features_in_": 500,
+      "feature_importances_shape": [
+        500
+      ],
+      "feature_importances_sum": 1.0,
+      "trained_tree_count": 199,
+      "total_nodes": 15123,
+      "avg_nodes_per_tree": 75.99497487437186,
+      "avg_tree_depth": 9.412060301507537,
+      "max_tree_depth": 10,
+      "avg_leaves_per_tree": 38.49748743718593
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 500,
+      "support_sum": 500,
+      "ranking_shape": [
+        21101
+      ]
+    }
+  }
+}

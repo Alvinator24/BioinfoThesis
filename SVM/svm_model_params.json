@@ -1,0 +1,2721 @@
+{
+  "svm": {
+    "file_path": "svm.pkl",
+    "file_size_bytes": 54612932,
+    "file_size_mb": 52.08,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "svm",
+          "SVC(C=0.0027814285643757543, coef0=0.02715581955282941, degree=2,\n    gamma=0.037566296134528526, kernel='poly', probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "svm": "SVC(C=0.0027814285643757543, coef0=0.02715581955282941, degree=2,\n    gamma=0.037566296134528526, kernel='poly', probability=True,\n    random_state=42)",
+      "svm__C": 0.0027814285643757543,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.02715581955282941,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 2,
+      "svm__gamma": 0.037566296134528526,
+      "svm__kernel": "poly",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 0.0027814285643757543,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.02715581955282941,
+      "decision_function_shape": "ovr",
+      "degree": 2,
+      "gamma": 0.037566296134528526,
+      "kernel": "poly",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        35,
+        24,
+        163,
+        97,
+        33
+      ],
+      "support_vectors_shape": [
+        352,
+        19277
+      ],
+      "dual_coef_shape": [
+        4,
+        352
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    }
+  },
+  "svm_irus": {
+    "file_path": "svm_irus.pkl",
+    "file_size_bytes": 36712964,
+    "file_size_mb": 35.01,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 74})"
+        ],
+        [
+          "svm",
+          "SVC(C=1.408146893930582, kernel='linear', probability=True, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 74})",
+      "svm": "SVC(C=1.408146893930582, kernel='linear', probability=True, random_state=42)",
+      "irus__random_state": 42,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 74
+      },
+      "svm__C": 1.408146893930582,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": "scale",
+      "svm__kernel": "linear",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 1.408146893930582,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": "scale",
+      "kernel": "linear",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        34,
+        23,
+        69,
+        80,
+        28
+      ],
+      "support_vectors_shape": [
+        234,
+        19277
+      ],
+      "dual_coef_shape": [
+        4,
+        234
+      ],
+      "coef_shape": [
+        10,
+        19277
+      ],
+      "intercept_shape": [
+        10
+      ]
+    }
+  },
+  "svm_irus_Norway": {
+    "file_path": "svm_irus_Norway.pkl",
+    "file_size_bytes": 23453060,
+    "file_size_mb": 22.37,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 30})"
+        ],
+        [
+          "svm",
+          "SVC(C=0.007007213496896407, kernel='linear', probability=True, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 30})",
+      "svm": "SVC(C=0.007007213496896407, kernel='linear', probability=True, random_state=42)",
+      "irus__random_state": 42,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 30
+      },
+      "svm__C": 0.007007213496896407,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": "scale",
+      "svm__kernel": "linear",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 0.007007213496896407,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": "scale",
+      "kernel": "linear",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        24,
+        30,
+        30,
+        43,
+        10
+      ],
+      "support_vectors_shape": [
+        137,
+        20789
+      ],
+      "dual_coef_shape": [
+        4,
+        137
+      ],
+      "coef_shape": [
+        10,
+        20789
+      ],
+      "intercept_shape": [
+        10
+      ]
+    }
+  },
+  "svm_irus_rfe": {
+    "file_path": "svm_irus_rfe.pkl",
+    "file_size_bytes": 2482541,
+    "file_size_mb": 2.37,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "rfe",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 74})"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.5, verbose=1)"
+        ],
+        [
+          "svm",
+          "SVC(C=14.747200953924711, kernel='linear', probability=True, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 74})",
+      "rfe": "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.5, verbose=1)",
+      "svm": "SVC(C=14.747200953924711, kernel='linear', probability=True, random_state=42)",
+      "irus__random_state": 42,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 74
+      },
+      "rfe__estimator__C": 1.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__dual": false,
+      "rfe__estimator__fit_intercept": true,
+      "rfe__estimator__intercept_scaling": 1,
+      "rfe__estimator__loss": "squared_hinge",
+      "rfe__estimator__max_iter": 1000,
+      "rfe__estimator__multi_class": "ovr",
+      "rfe__estimator__penalty": "l2",
+      "rfe__estimator__random_state": 42,
+      "rfe__estimator__tol": 0.0001,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator": "LinearSVC(dual=False, random_state=42)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 1000,
+      "rfe__step": 0.5,
+      "rfe__verbose": 1,
+      "svm__C": 14.747200953924711,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": "scale",
+      "svm__kernel": "linear",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 14.747200953924711,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": "scale",
+      "kernel": "linear",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        28,
+        23,
+        66,
+        75,
+        23
+      ],
+      "support_vectors_shape": [
+        215,
+        1000
+      ],
+      "dual_coef_shape": [
+        4,
+        215
+      ],
+      "coef_shape": [
+        10,
+        1000
+      ],
+      "intercept_shape": [
+        10
+      ]
+    },
+    "rfe_params": {
+      "estimator__C": 1.0,
+      "estimator__class_weight": null,
+      "estimator__dual": false,
+      "estimator__fit_intercept": true,
+      "estimator__intercept_scaling": 1,
+      "estimator__loss": "squared_hinge",
+      "estimator__max_iter": 1000,
+      "estimator__multi_class": "ovr",
+      "estimator__penalty": "l2",
+      "estimator__random_state": 42,
+      "estimator__tol": 0.0001,
+      "estimator__verbose": 0,
+      "estimator": "LinearSVC(dual=False, random_state=42)",
+      "importance_getter": "auto",
+      "n_features_to_select": 1000,
+      "step": 0.5,
+      "verbose": 1
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 1000,
+      "support_sum": 1000,
+      "ranking_shape": [
+        19277
+      ]
+    }
+  },
+  "svm_irus_rfe_Norway": {
+    "file_path": "svm_irus_rfe_Norway.pkl",
+    "file_size_bytes": 1917341,
+    "file_size_mb": 1.83,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "rfe",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 30})"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.25, verbose=1)"
+        ],
+        [
+          "svm",
+          "SVC(C=14.952244707681663, coef0=0.008207295819490819, degree=5,\n    gamma=0.01219301199395897, kernel='poly', probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 30})",
+      "rfe": "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.25, verbose=1)",
+      "svm": "SVC(C=14.952244707681663, coef0=0.008207295819490819, degree=5,\n    gamma=0.01219301199395897, kernel='poly', probability=True,\n    random_state=42)",
+      "irus__random_state": 42,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 30
+      },
+      "rfe__estimator__C": 1.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__dual": false,
+      "rfe__estimator__fit_intercept": true,
+      "rfe__estimator__intercept_scaling": 1,
+      "rfe__estimator__loss": "squared_hinge",
+      "rfe__estimator__max_iter": 1000,
+      "rfe__estimator__multi_class": "ovr",
+      "rfe__estimator__penalty": "l2",
+      "rfe__estimator__random_state": 42,
+      "rfe__estimator__tol": 0.0001,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator": "LinearSVC(dual=False, random_state=42)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 1000,
+      "rfe__step": 0.25,
+      "rfe__verbose": 1,
+      "svm__C": 14.952244707681663,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.008207295819490819,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 5,
+      "svm__gamma": 0.01219301199395897,
+      "svm__kernel": "poly",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 14.952244707681663,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.008207295819490819,
+      "decision_function_shape": "ovr",
+      "degree": 5,
+      "gamma": 0.01219301199395897,
+      "kernel": "poly",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        23,
+        30,
+        30,
+        45,
+        10
+      ],
+      "support_vectors_shape": [
+        138,
+        1000
+      ],
+      "dual_coef_shape": [
+        4,
+        138
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    },
+    "rfe_params": {
+      "estimator__C": 1.0,
+      "estimator__class_weight": null,
+      "estimator__dual": false,
+      "estimator__fit_intercept": true,
+      "estimator__intercept_scaling": 1,
+      "estimator__loss": "squared_hinge",
+      "estimator__max_iter": 1000,
+      "estimator__multi_class": "ovr",
+      "estimator__penalty": "l2",
+      "estimator__random_state": 42,
+      "estimator__tol": 0.0001,
+      "estimator__verbose": 0,
+      "estimator": "LinearSVC(dual=False, random_state=42)",
+      "importance_getter": "auto",
+      "n_features_to_select": 1000,
+      "step": 0.25,
+      "verbose": 1
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 1000,
+      "support_sum": 1000,
+      "ranking_shape": [
+        20789
+      ]
+    }
+  },
+  "svm_Norway": {
+    "file_path": "svm_Norway.pkl",
+    "file_size_bytes": 33273204,
+    "file_size_mb": 31.73,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "svm",
+          "SVC(C=0.0027814285643757543, coef0=0.02715581955282941, degree=2,\n    gamma=0.037566296134528526, kernel='poly', probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "svm": "SVC(C=0.0027814285643757543, coef0=0.02715581955282941, degree=2,\n    gamma=0.037566296134528526, kernel='poly', probability=True,\n    random_state=42)",
+      "svm__C": 0.0027814285643757543,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.02715581955282941,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 2,
+      "svm__gamma": 0.037566296134528526,
+      "svm__kernel": "poly",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 0.0027814285643757543,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.02715581955282941,
+      "decision_function_shape": "ovr",
+      "degree": 2,
+      "gamma": 0.037566296134528526,
+      "kernel": "poly",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        23,
+        30,
+        87,
+        48,
+        10
+      ],
+      "support_vectors_shape": [
+        198,
+        20789
+      ],
+      "dual_coef_shape": [
+        4,
+        198
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    }
+  },
+  "svm_rfe": {
+    "file_path": "svm_rfe.pkl",
+    "file_size_bytes": 1642765,
+    "file_size_mb": 1.57,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "rfe",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "rfe",
+          "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=500,\n    step=0.25, verbose=1)"
+        ],
+        [
+          "svm",
+          "SVC(C=363.038926852331, gamma=0.004328724829857124, probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "rfe": "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=500,\n    step=0.25, verbose=1)",
+      "svm": "SVC(C=363.038926852331, gamma=0.004328724829857124, probability=True,\n    random_state=42)",
+      "rfe__estimator__C": 1.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__dual": false,
+      "rfe__estimator__fit_intercept": true,
+      "rfe__estimator__intercept_scaling": 1,
+      "rfe__estimator__loss": "squared_hinge",
+      "rfe__estimator__max_iter": 1000,
+      "rfe__estimator__multi_class": "ovr",
+      "rfe__estimator__penalty": "l2",
+      "rfe__estimator__random_state": 42,
+      "rfe__estimator__tol": 0.0001,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator": "LinearSVC(dual=False, random_state=42)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 500,
+      "rfe__step": 0.25,
+      "rfe__verbose": 1,
+      "svm__C": 363.038926852331,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": 0.004328724829857124,
+      "svm__kernel": "rbf",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 363.038926852331,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": 0.004328724829857124,
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        32,
+        24,
+        126,
+        86,
+        32
+      ],
+      "support_vectors_shape": [
+        300,
+        500
+      ],
+      "dual_coef_shape": [
+        4,
+        300
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    },
+    "rfe_params": {
+      "estimator__C": 1.0,
+      "estimator__class_weight": null,
+      "estimator__dual": false,
+      "estimator__fit_intercept": true,
+      "estimator__intercept_scaling": 1,
+      "estimator__loss": "squared_hinge",
+      "estimator__max_iter": 1000,
+      "estimator__multi_class": "ovr",
+      "estimator__penalty": "l2",
+      "estimator__random_state": 42,
+      "estimator__tol": 0.0001,
+      "estimator__verbose": 0,
+      "estimator": "LinearSVC(dual=False, random_state=42)",
+      "importance_getter": "auto",
+      "n_features_to_select": 500,
+      "step": 0.25,
+      "verbose": 1
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 500,
+      "support_sum": 500,
+      "ranking_shape": [
+        19277
+      ]
+    }
+  },
+  "svm_rfe_Norway": {
+    "file_path": "svm_rfe_Norway.pkl",
+    "file_size_bytes": 1207517,
+    "file_size_mb": 1.15,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "rfe",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "rfe",
+          "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=500,\n    step=0.2, verbose=1)"
+        ],
+        [
+          "svm",
+          "SVC(C=7.115245297181689, coef0=0.0021705003488711127, degree=5,\n    gamma=0.008447014808943042, kernel='poly', probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "rfe": "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=500,\n    step=0.2, verbose=1)",
+      "svm": "SVC(C=7.115245297181689, coef0=0.0021705003488711127, degree=5,\n    gamma=0.008447014808943042, kernel='poly', probability=True,\n    random_state=42)",
+      "rfe__estimator__C": 1.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__dual": false,
+      "rfe__estimator__fit_intercept": true,
+      "rfe__estimator__intercept_scaling": 1,
+      "rfe__estimator__loss": "squared_hinge",
+      "rfe__estimator__max_iter": 1000,
+      "rfe__estimator__multi_class": "ovr",
+      "rfe__estimator__penalty": "l2",
+      "rfe__estimator__random_state": 42,
+      "rfe__estimator__tol": 0.0001,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator": "LinearSVC(dual=False, random_state=42)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 500,
+      "rfe__step": 0.2,
+      "rfe__verbose": 1,
+      "svm__C": 7.115245297181689,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0021705003488711127,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 5,
+      "svm__gamma": 0.008447014808943042,
+      "svm__kernel": "poly",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 7.115245297181689,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0021705003488711127,
+      "decision_function_shape": "ovr",
+      "degree": 5,
+      "gamma": 0.008447014808943042,
+      "kernel": "poly",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        23,
+        29,
+        77,
+        46,
+        10
+      ],
+      "support_vectors_shape": [
+        185,
+        500
+      ],
+      "dual_coef_shape": [
+        4,
+        185
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    },
+    "rfe_params": {
+      "estimator__C": 1.0,
+      "estimator__class_weight": null,
+      "estimator__dual": false,
+      "estimator__fit_intercept": true,
+      "estimator__intercept_scaling": 1,
+      "estimator__loss": "squared_hinge",
+      "estimator__max_iter": 1000,
+      "estimator__multi_class": "ovr",
+      "estimator__penalty": "l2",
+      "estimator__random_state": 42,
+      "estimator__tol": 0.0001,
+      "estimator__verbose": 0,
+      "estimator": "LinearSVC(dual=False, random_state=42)",
+      "importance_getter": "auto",
+      "n_features_to_select": 500,
+      "step": 0.2,
+      "verbose": 1
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 500,
+      "support_sum": 500,
+      "ranking_shape": [
+        20789
+      ]
+    }
+  },
+  "svm_smote": {
+    "file_path": "svm_smote.pkl",
+    "file_size_bytes": 93482365,
+    "file_size_mb": 89.15,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(random_state=42)"
+        ],
+        [
+          "svm",
+          "SVC(C=199.37998248613215, gamma=4.185285656222354e-05, probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(random_state=42)",
+      "svm": "SVC(C=199.37998248613215, gamma=4.185285656222354e-05, probability=True,\n    random_state=42)",
+      "smote__k_neighbors": 5,
+      "smote__random_state": 42,
+      "smote__sampling_strategy": "auto",
+      "svm__C": 199.37998248613215,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": 4.185285656222354e-05,
+      "svm__kernel": "rbf",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 199.37998248613215,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": 4.185285656222354e-05,
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        66,
+        99,
+        166,
+        153,
+        48
+      ],
+      "support_vectors_shape": [
+        532,
+        19277
+      ],
+      "dual_coef_shape": [
+        4,
+        532
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    }
+  },
+  "svm_smote_Norway": {
+    "file_path": "svm_smote_Norway.pkl",
+    "file_size_bytes": 49240445,
+    "file_size_mb": 46.96,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(random_state=42)"
+        ],
+        [
+          "svm",
+          "SVC(C=70.58660227368642, gamma=0.0014689898077648819, probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(random_state=42)",
+      "svm": "SVC(C=70.58660227368642, gamma=0.0014689898077648819, probability=True,\n    random_state=42)",
+      "smote__k_neighbors": 5,
+      "smote__random_state": 42,
+      "smote__sampling_strategy": "auto",
+      "svm__C": 70.58660227368642,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": 0.0014689898077648819,
+      "svm__kernel": "rbf",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 70.58660227368642,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": 0.0014689898077648819,
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        37,
+        49,
+        89,
+        76,
+        31
+      ],
+      "support_vectors_shape": [
+        282,
+        20789
+      ],
+      "dual_coef_shape": [
+        4,
+        282
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    }
+  },
+  "svm_smote_rfe": {
+    "file_path": "svm_smote_rfe.pkl",
+    "file_size_bytes": 16034573,
+    "file_size_mb": 15.29,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "rfe",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(random_state=42)"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.5, verbose=1)"
+        ],
+        [
+          "svm",
+          "SVC(C=0.020962654929999876, kernel='linear', probability=True, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(random_state=42)",
+      "rfe": "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.5, verbose=1)",
+      "svm": "SVC(C=0.020962654929999876, kernel='linear', probability=True, random_state=42)",
+      "smote__k_neighbors": 5,
+      "smote__random_state": 42,
+      "smote__sampling_strategy": "auto",
+      "rfe__estimator__C": 1.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__dual": false,
+      "rfe__estimator__fit_intercept": true,
+      "rfe__estimator__intercept_scaling": 1,
+      "rfe__estimator__loss": "squared_hinge",
+      "rfe__estimator__max_iter": 1000,
+      "rfe__estimator__multi_class": "ovr",
+      "rfe__estimator__penalty": "l2",
+      "rfe__estimator__random_state": 42,
+      "rfe__estimator__tol": 0.0001,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator": "LinearSVC(dual=False, random_state=42)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 1000,
+      "rfe__step": 0.5,
+      "rfe__verbose": 1,
+      "svm__C": 0.020962654929999876,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": "scale",
+      "svm__kernel": "linear",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 0.020962654929999876,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": "scale",
+      "kernel": "linear",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        61,
+        107,
+        171,
+        162,
+        56
+      ],
+      "support_vectors_shape": [
+        557,
+        1000
+      ],
+      "dual_coef_shape": [
+        4,
+        557
+      ],
+      "coef_shape": [
+        10,
+        1000
+      ],
+      "intercept_shape": [
+        10
+      ]
+    },
+    "rfe_params": {
+      "estimator__C": 1.0,
+      "estimator__class_weight": null,
+      "estimator__dual": false,
+      "estimator__fit_intercept": true,
+      "estimator__intercept_scaling": 1,
+      "estimator__loss": "squared_hinge",
+      "estimator__max_iter": 1000,
+      "estimator__multi_class": "ovr",
+      "estimator__penalty": "l2",
+      "estimator__random_state": 42,
+      "estimator__tol": 0.0001,
+      "estimator__verbose": 0,
+      "estimator": "LinearSVC(dual=False, random_state=42)",
+      "importance_getter": "auto",
+      "n_features_to_select": 1000,
+      "step": 0.5,
+      "verbose": 1
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 1000,
+      "support_sum": 1000,
+      "ranking_shape": [
+        19277
+      ]
+    }
+  },
+  "svm_smote_rfe_Norway": {
+    "file_path": "svm_smote_rfe_Norway.pkl",
+    "file_size_bytes": 3503949,
+    "file_size_mb": 3.34,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "rfe",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(random_state=42)"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=500,\n    step=0.2, verbose=1)"
+        ],
+        [
+          "svm",
+          "SVC(C=7.115245297181689, coef0=0.0021705003488711127, degree=5,\n    gamma=0.008447014808943042, kernel='poly', probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(random_state=42)",
+      "rfe": "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=500,\n    step=0.2, verbose=1)",
+      "svm": "SVC(C=7.115245297181689, coef0=0.0021705003488711127, degree=5,\n    gamma=0.008447014808943042, kernel='poly', probability=True,\n    random_state=42)",
+      "smote__k_neighbors": 5,
+      "smote__random_state": 42,
+      "smote__sampling_strategy": "auto",
+      "rfe__estimator__C": 1.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__dual": false,
+      "rfe__estimator__fit_intercept": true,
+      "rfe__estimator__intercept_scaling": 1,
+      "rfe__estimator__loss": "squared_hinge",
+      "rfe__estimator__max_iter": 1000,
+      "rfe__estimator__multi_class": "ovr",
+      "rfe__estimator__penalty": "l2",
+      "rfe__estimator__random_state": 42,
+      "rfe__estimator__tol": 0.0001,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator": "LinearSVC(dual=False, random_state=42)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 500,
+      "rfe__step": 0.2,
+      "rfe__verbose": 1,
+      "svm__C": 7.115245297181689,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0021705003488711127,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 5,
+      "svm__gamma": 0.008447014808943042,
+      "svm__kernel": "poly",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 7.115245297181689,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0021705003488711127,
+      "decision_function_shape": "ovr",
+      "degree": 5,
+      "gamma": 0.008447014808943042,
+      "kernel": "poly",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        39,
+        52,
+        73,
+        64,
+        32
+      ],
+      "support_vectors_shape": [
+        260,
+        500
+      ],
+      "dual_coef_shape": [
+        4,
+        260
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    },
+    "rfe_params": {
+      "estimator__C": 1.0,
+      "estimator__class_weight": null,
+      "estimator__dual": false,
+      "estimator__fit_intercept": true,
+      "estimator__intercept_scaling": 1,
+      "estimator__loss": "squared_hinge",
+      "estimator__max_iter": 1000,
+      "estimator__multi_class": "ovr",
+      "estimator__penalty": "l2",
+      "estimator__random_state": 42,
+      "estimator__tol": 0.0001,
+      "estimator__verbose": 0,
+      "estimator": "LinearSVC(dual=False, random_state=42)",
+      "importance_getter": "auto",
+      "n_features_to_select": 500,
+      "step": 0.2,
+      "verbose": 1
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 500,
+      "support_sum": 500,
+      "ranking_shape": [
+        20789
+      ]
+    }
+  },
+  "svm_purified": {
+    "file_path": "Purified\\svm.pkl",
+    "file_size_bytes": 53552900,
+    "file_size_mb": 51.07,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "svm",
+          "SVC(C=1.408146893930582, kernel='linear', probability=True, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "svm": "SVC(C=1.408146893930582, kernel='linear', probability=True, random_state=42)",
+      "svm__C": 1.408146893930582,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": "scale",
+      "svm__kernel": "linear",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 1.408146893930582,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": "scale",
+      "kernel": "linear",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        31,
+        23,
+        164,
+        94,
+        34
+      ],
+      "support_vectors_shape": [
+        346,
+        19277
+      ],
+      "dual_coef_shape": [
+        4,
+        346
+      ],
+      "coef_shape": [
+        10,
+        19277
+      ],
+      "intercept_shape": [
+        10
+      ]
+    }
+  },
+  "svm_irus_purified": {
+    "file_path": "Purified\\svm_irus.pkl",
+    "file_size_bytes": 37370052,
+    "file_size_mb": 35.64,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 75})"
+        ],
+        [
+          "svm",
+          "SVC(C=199.37998248613215, gamma=4.185285656222354e-05, probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 75})",
+      "svm": "SVC(C=199.37998248613215, gamma=4.185285656222354e-05, probability=True,\n    random_state=42)",
+      "irus__random_state": 42,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 75
+      },
+      "svm__C": 199.37998248613215,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": 4.185285656222354e-05,
+      "svm__kernel": "rbf",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 199.37998248613215,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": 4.185285656222354e-05,
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        33,
+        23,
+        72,
+        83,
+        29
+      ],
+      "support_vectors_shape": [
+        240,
+        19277
+      ],
+      "dual_coef_shape": [
+        4,
+        240
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    }
+  },
+  "svm_irus_Norway_purified": {
+    "file_path": "Purified\\svm_irus_Norway.pkl",
+    "file_size_bytes": 25031076,
+    "file_size_mb": 23.87,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 36})"
+        ],
+        [
+          "svm",
+          "SVC(C=595.2285716284425, gamma=1.815145649657759e-05, probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 36})",
+      "svm": "SVC(C=595.2285716284425, gamma=1.815145649657759e-05, probability=True,\n    random_state=42)",
+      "irus__random_state": 42,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 36
+      },
+      "svm__C": 595.2285716284425,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": 1.815145649657759e-05,
+      "svm__kernel": "rbf",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 595.2285716284425,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": 1.815145649657759e-05,
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        21,
+        30,
+        35,
+        46,
+        14
+      ],
+      "support_vectors_shape": [
+        146,
+        21101
+      ],
+      "dual_coef_shape": [
+        4,
+        146
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    }
+  },
+  "svm_irus_rfe_purified": {
+    "file_path": "Purified\\svm_irus_rfe.pkl",
+    "file_size_bytes": 2323261,
+    "file_size_mb": 2.22,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "rfe",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 75})"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.25, verbose=1)"
+        ],
+        [
+          "svm",
+          "SVC(C=44.750401913509016, kernel='linear', probability=True, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 75})",
+      "rfe": "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.25, verbose=1)",
+      "svm": "SVC(C=44.750401913509016, kernel='linear', probability=True, random_state=42)",
+      "irus__random_state": 42,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 75
+      },
+      "rfe__estimator__C": 1.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__dual": false,
+      "rfe__estimator__fit_intercept": true,
+      "rfe__estimator__intercept_scaling": 1,
+      "rfe__estimator__loss": "squared_hinge",
+      "rfe__estimator__max_iter": 1000,
+      "rfe__estimator__multi_class": "ovr",
+      "rfe__estimator__penalty": "l2",
+      "rfe__estimator__random_state": 42,
+      "rfe__estimator__tol": 0.0001,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator": "LinearSVC(dual=False, random_state=42)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 1000,
+      "rfe__step": 0.25,
+      "rfe__verbose": 1,
+      "svm__C": 44.750401913509016,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": "scale",
+      "svm__kernel": "linear",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 44.750401913509016,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": "scale",
+      "kernel": "linear",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        31,
+        23,
+        63,
+        74,
+        28
+      ],
+      "support_vectors_shape": [
+        219,
+        1000
+      ],
+      "dual_coef_shape": [
+        4,
+        219
+      ],
+      "coef_shape": [
+        10,
+        1000
+      ],
+      "intercept_shape": [
+        10
+      ]
+    },
+    "rfe_params": {
+      "estimator__C": 1.0,
+      "estimator__class_weight": null,
+      "estimator__dual": false,
+      "estimator__fit_intercept": true,
+      "estimator__intercept_scaling": 1,
+      "estimator__loss": "squared_hinge",
+      "estimator__max_iter": 1000,
+      "estimator__multi_class": "ovr",
+      "estimator__penalty": "l2",
+      "estimator__random_state": 42,
+      "estimator__tol": 0.0001,
+      "estimator__verbose": 0,
+      "estimator": "LinearSVC(dual=False, random_state=42)",
+      "importance_getter": "auto",
+      "n_features_to_select": 1000,
+      "step": 0.25,
+      "verbose": 1
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 1000,
+      "support_sum": 1000,
+      "ranking_shape": [
+        19277
+      ]
+    }
+  },
+  "svm_irus_rfe_Norway_purified": {
+    "file_path": "Purified\\svm_irus_rfe_Norway.pkl",
+    "file_size_bytes": 1880813,
+    "file_size_mb": 1.79,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "rfe",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 36})"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.2, verbose=1)"
+        ],
+        [
+          "svm",
+          "SVC(C=3.3151790861321726, gamma=0.0670311293206946, probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=42, sampling_strategy={'LumA': 36})",
+      "rfe": "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.2, verbose=1)",
+      "svm": "SVC(C=3.3151790861321726, gamma=0.0670311293206946, probability=True,\n    random_state=42)",
+      "irus__random_state": 42,
+      "irus__replacement": false,
+      "irus__sampling_strategy": {
+        "LumA": 36
+      },
+      "rfe__estimator__C": 1.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__dual": false,
+      "rfe__estimator__fit_intercept": true,
+      "rfe__estimator__intercept_scaling": 1,
+      "rfe__estimator__loss": "squared_hinge",
+      "rfe__estimator__max_iter": 1000,
+      "rfe__estimator__multi_class": "ovr",
+      "rfe__estimator__penalty": "l2",
+      "rfe__estimator__random_state": 42,
+      "rfe__estimator__tol": 0.0001,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator": "LinearSVC(dual=False, random_state=42)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 1000,
+      "rfe__step": 0.2,
+      "rfe__verbose": 1,
+      "svm__C": 3.3151790861321726,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": 0.0670311293206946,
+      "svm__kernel": "rbf",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 3.3151790861321726,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": 0.0670311293206946,
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        27,
+        30,
+        36,
+        51,
+        14
+      ],
+      "support_vectors_shape": [
+        158,
+        1000
+      ],
+      "dual_coef_shape": [
+        4,
+        158
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    },
+    "rfe_params": {
+      "estimator__C": 1.0,
+      "estimator__class_weight": null,
+      "estimator__dual": false,
+      "estimator__fit_intercept": true,
+      "estimator__intercept_scaling": 1,
+      "estimator__loss": "squared_hinge",
+      "estimator__max_iter": 1000,
+      "estimator__multi_class": "ovr",
+      "estimator__penalty": "l2",
+      "estimator__random_state": 42,
+      "estimator__tol": 0.0001,
+      "estimator__verbose": 0,
+      "estimator": "LinearSVC(dual=False, random_state=42)",
+      "importance_getter": "auto",
+      "n_features_to_select": 1000,
+      "step": 0.2,
+      "verbose": 1
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 1000,
+      "support_sum": 1000,
+      "ranking_shape": [
+        21101
+      ]
+    }
+  },
+  "svm_Norway_purified": {
+    "file_path": "Purified\\svm_Norway.pkl",
+    "file_size_bytes": 34300932,
+    "file_size_mb": 32.71,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "svm",
+          "SVC(C=0.4731474644815003, coef0=0.002511306167739001, degree=4,\n    gamma=0.021423021757741054, kernel='poly', probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "svm": "SVC(C=0.4731474644815003, coef0=0.002511306167739001, degree=4,\n    gamma=0.021423021757741054, kernel='poly', probability=True,\n    random_state=42)",
+      "svm__C": 0.4731474644815003,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.002511306167739001,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 4,
+      "svm__gamma": 0.021423021757741054,
+      "svm__kernel": "poly",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 0.4731474644815003,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.002511306167739001,
+      "decision_function_shape": "ovr",
+      "degree": 4,
+      "gamma": 0.021423021757741054,
+      "kernel": "poly",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        22,
+        30,
+        86,
+        50,
+        14
+      ],
+      "support_vectors_shape": [
+        202,
+        21101
+      ],
+      "dual_coef_shape": [
+        4,
+        202
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    }
+  },
+  "svm_rfe_purified": {
+    "file_path": "Purified\\svm_rfe.pkl",
+    "file_size_bytes": 2894285,
+    "file_size_mb": 2.76,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "rfe",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "rfe",
+          "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.25, verbose=1)"
+        ],
+        [
+          "svm",
+          "SVC(C=44.750401913509016, kernel='linear', probability=True, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "rfe": "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.25, verbose=1)",
+      "svm": "SVC(C=44.750401913509016, kernel='linear', probability=True, random_state=42)",
+      "rfe__estimator__C": 1.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__dual": false,
+      "rfe__estimator__fit_intercept": true,
+      "rfe__estimator__intercept_scaling": 1,
+      "rfe__estimator__loss": "squared_hinge",
+      "rfe__estimator__max_iter": 1000,
+      "rfe__estimator__multi_class": "ovr",
+      "rfe__estimator__penalty": "l2",
+      "rfe__estimator__random_state": 42,
+      "rfe__estimator__tol": 0.0001,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator": "LinearSVC(dual=False, random_state=42)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 1000,
+      "rfe__step": 0.25,
+      "rfe__verbose": 1,
+      "svm__C": 44.750401913509016,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": "scale",
+      "svm__kernel": "linear",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 44.750401913509016,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": "scale",
+      "kernel": "linear",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        28,
+        24,
+        141,
+        87,
+        31
+      ],
+      "support_vectors_shape": [
+        311,
+        1000
+      ],
+      "dual_coef_shape": [
+        4,
+        311
+      ],
+      "coef_shape": [
+        10,
+        1000
+      ],
+      "intercept_shape": [
+        10
+      ]
+    },
+    "rfe_params": {
+      "estimator__C": 1.0,
+      "estimator__class_weight": null,
+      "estimator__dual": false,
+      "estimator__fit_intercept": true,
+      "estimator__intercept_scaling": 1,
+      "estimator__loss": "squared_hinge",
+      "estimator__max_iter": 1000,
+      "estimator__multi_class": "ovr",
+      "estimator__penalty": "l2",
+      "estimator__random_state": 42,
+      "estimator__tol": 0.0001,
+      "estimator__verbose": 0,
+      "estimator": "LinearSVC(dual=False, random_state=42)",
+      "importance_getter": "auto",
+      "n_features_to_select": 1000,
+      "step": 0.25,
+      "verbose": 1
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 1000,
+      "support_sum": 1000,
+      "ranking_shape": [
+        19277
+      ]
+    }
+  },
+  "svm_rfe_Norway_purified": {
+    "file_path": "Purified\\svm_rfe_Norway.pkl",
+    "file_size_bytes": 2113181,
+    "file_size_mb": 2.02,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "rfe",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "rfe",
+          "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.2, verbose=1)"
+        ],
+        [
+          "svm",
+          "SVC(C=3.3151790861321726, gamma=0.0670311293206946, probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "rfe": "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.2, verbose=1)",
+      "svm": "SVC(C=3.3151790861321726, gamma=0.0670311293206946, probability=True,\n    random_state=42)",
+      "rfe__estimator__C": 1.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__dual": false,
+      "rfe__estimator__fit_intercept": true,
+      "rfe__estimator__intercept_scaling": 1,
+      "rfe__estimator__loss": "squared_hinge",
+      "rfe__estimator__max_iter": 1000,
+      "rfe__estimator__multi_class": "ovr",
+      "rfe__estimator__penalty": "l2",
+      "rfe__estimator__random_state": 42,
+      "rfe__estimator__tol": 0.0001,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator": "LinearSVC(dual=False, random_state=42)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 1000,
+      "rfe__step": 0.2,
+      "rfe__verbose": 1,
+      "svm__C": 3.3151790861321726,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": 0.0670311293206946,
+      "svm__kernel": "rbf",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 3.3151790861321726,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": 0.0670311293206946,
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        27,
+        30,
+        88,
+        51,
+        14
+      ],
+      "support_vectors_shape": [
+        210,
+        1000
+      ],
+      "dual_coef_shape": [
+        4,
+        210
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    },
+    "rfe_params": {
+      "estimator__C": 1.0,
+      "estimator__class_weight": null,
+      "estimator__dual": false,
+      "estimator__fit_intercept": true,
+      "estimator__intercept_scaling": 1,
+      "estimator__loss": "squared_hinge",
+      "estimator__max_iter": 1000,
+      "estimator__multi_class": "ovr",
+      "estimator__penalty": "l2",
+      "estimator__random_state": 42,
+      "estimator__tol": 0.0001,
+      "estimator__verbose": 0,
+      "estimator": "LinearSVC(dual=False, random_state=42)",
+      "importance_getter": "auto",
+      "n_features_to_select": 1000,
+      "step": 0.2,
+      "verbose": 1
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 1000,
+      "support_sum": 1000,
+      "ranking_shape": [
+        21101
+      ]
+    }
+  },
+  "svm_smote_purified": {
+    "file_path": "Purified\\svm_smote.pkl",
+    "file_size_bytes": 86733933,
+    "file_size_mb": 82.72,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(random_state=42)"
+        ],
+        [
+          "svm",
+          "SVC(C=199.37998248613215, gamma=4.185285656222354e-05, probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(random_state=42)",
+      "svm": "SVC(C=199.37998248613215, gamma=4.185285656222354e-05, probability=True,\n    random_state=42)",
+      "smote__k_neighbors": 5,
+      "smote__random_state": 42,
+      "smote__sampling_strategy": "auto",
+      "svm__C": 199.37998248613215,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": 4.185285656222354e-05,
+      "svm__kernel": "rbf",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 199.37998248613215,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": 4.185285656222354e-05,
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        61,
+        80,
+        168,
+        137,
+        45
+      ],
+      "support_vectors_shape": [
+        491,
+        19277
+      ],
+      "dual_coef_shape": [
+        4,
+        491
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    }
+  },
+  "svm_smote_Norway_purified": {
+    "file_path": "Purified\\svm_smote_Norway.pkl",
+    "file_size_bytes": 50529533,
+    "file_size_mb": 48.19,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(k_neighbors=3, random_state=42)"
+        ],
+        [
+          "svm",
+          "SVC(C=656.9128640939175, gamma=0.0075104181387775516, probability=True,\n    random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(k_neighbors=3, random_state=42)",
+      "svm": "SVC(C=656.9128640939175, gamma=0.0075104181387775516, probability=True,\n    random_state=42)",
+      "smote__k_neighbors": 3,
+      "smote__random_state": 42,
+      "smote__sampling_strategy": "auto",
+      "svm__C": 656.9128640939175,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": 0.0075104181387775516,
+      "svm__kernel": "rbf",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 656.9128640939175,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": 0.0075104181387775516,
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        32,
+        43,
+        91,
+        82,
+        35
+      ],
+      "support_vectors_shape": [
+        283,
+        21101
+      ],
+      "dual_coef_shape": [
+        4,
+        283
+      ],
+      "coef_shape": null,
+      "intercept_shape": [
+        10
+      ]
+    }
+  },
+  "svm_smote_rfe_purified": {
+    "file_path": "Purified\\svm_smote_rfe.pkl",
+    "file_size_bytes": 16068013,
+    "file_size_mb": 15.32,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "rfe",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(random_state=42)"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.5, verbose=1)"
+        ],
+        [
+          "svm",
+          "SVC(C=0.016533597028439553, kernel='linear', probability=True, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(random_state=42)",
+      "rfe": "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.5, verbose=1)",
+      "svm": "SVC(C=0.016533597028439553, kernel='linear', probability=True, random_state=42)",
+      "smote__k_neighbors": 5,
+      "smote__random_state": 42,
+      "smote__sampling_strategy": "auto",
+      "rfe__estimator__C": 1.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__dual": false,
+      "rfe__estimator__fit_intercept": true,
+      "rfe__estimator__intercept_scaling": 1,
+      "rfe__estimator__loss": "squared_hinge",
+      "rfe__estimator__max_iter": 1000,
+      "rfe__estimator__multi_class": "ovr",
+      "rfe__estimator__penalty": "l2",
+      "rfe__estimator__random_state": 42,
+      "rfe__estimator__tol": 0.0001,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator": "LinearSVC(dual=False, random_state=42)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 1000,
+      "rfe__step": 0.5,
+      "rfe__verbose": 1,
+      "svm__C": 0.016533597028439553,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": "scale",
+      "svm__kernel": "linear",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 0.016533597028439553,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": "scale",
+      "kernel": "linear",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        72,
+        121,
+        179,
+        174,
+        58
+      ],
+      "support_vectors_shape": [
+        604,
+        1000
+      ],
+      "dual_coef_shape": [
+        4,
+        604
+      ],
+      "coef_shape": [
+        10,
+        1000
+      ],
+      "intercept_shape": [
+        10
+      ]
+    },
+    "rfe_params": {
+      "estimator__C": 1.0,
+      "estimator__class_weight": null,
+      "estimator__dual": false,
+      "estimator__fit_intercept": true,
+      "estimator__intercept_scaling": 1,
+      "estimator__loss": "squared_hinge",
+      "estimator__max_iter": 1000,
+      "estimator__multi_class": "ovr",
+      "estimator__penalty": "l2",
+      "estimator__random_state": 42,
+      "estimator__tol": 0.0001,
+      "estimator__verbose": 0,
+      "estimator": "LinearSVC(dual=False, random_state=42)",
+      "importance_getter": "auto",
+      "n_features_to_select": 1000,
+      "step": 0.5,
+      "verbose": 1
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 1000,
+      "support_sum": 1000,
+      "ranking_shape": [
+        19277
+      ]
+    }
+  },
+  "svm_smote_rfe_Norway_purified": {
+    "file_path": "Purified\\svm_smote_rfe_Norway.pkl",
+    "file_size_bytes": 6324781,
+    "file_size_mb": 6.03,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "rfe",
+      "svm"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(random_state=42)"
+        ],
+        [
+          "rfe",
+          "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.5, verbose=1)"
+        ],
+        [
+          "svm",
+          "SVC(C=0.01559747953698375, kernel='linear', probability=True, random_state=42)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(random_state=42)",
+      "rfe": "RFE(estimator=LinearSVC(dual=False, random_state=42), n_features_to_select=1000,\n    step=0.5, verbose=1)",
+      "svm": "SVC(C=0.01559747953698375, kernel='linear', probability=True, random_state=42)",
+      "smote__k_neighbors": 5,
+      "smote__random_state": 42,
+      "smote__sampling_strategy": "auto",
+      "rfe__estimator__C": 1.0,
+      "rfe__estimator__class_weight": null,
+      "rfe__estimator__dual": false,
+      "rfe__estimator__fit_intercept": true,
+      "rfe__estimator__intercept_scaling": 1,
+      "rfe__estimator__loss": "squared_hinge",
+      "rfe__estimator__max_iter": 1000,
+      "rfe__estimator__multi_class": "ovr",
+      "rfe__estimator__penalty": "l2",
+      "rfe__estimator__random_state": 42,
+      "rfe__estimator__tol": 0.0001,
+      "rfe__estimator__verbose": 0,
+      "rfe__estimator": "LinearSVC(dual=False, random_state=42)",
+      "rfe__importance_getter": "auto",
+      "rfe__n_features_to_select": 1000,
+      "rfe__step": 0.5,
+      "rfe__verbose": 1,
+      "svm__C": 0.01559747953698375,
+      "svm__break_ties": false,
+      "svm__cache_size": 200,
+      "svm__class_weight": null,
+      "svm__coef0": 0.0,
+      "svm__decision_function_shape": "ovr",
+      "svm__degree": 3,
+      "svm__gamma": "scale",
+      "svm__kernel": "linear",
+      "svm__max_iter": -1,
+      "svm__probability": true,
+      "svm__random_state": 42,
+      "svm__shrinking": true,
+      "svm__tol": 0.001,
+      "svm__verbose": false
+    },
+    "svm_params": {
+      "C": 0.01559747953698375,
+      "break_ties": false,
+      "cache_size": 200,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": "scale",
+      "kernel": "linear",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "trained_attributes": {
+      "classes_": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "n_support_": [
+        56,
+        90,
+        93,
+        85,
+        92
+      ],
+      "support_vectors_shape": [
+        416,
+        1000
+      ],
+      "dual_coef_shape": [
+        4,
+        416
+      ],
+      "coef_shape": [
+        10,
+        1000
+      ],
+      "intercept_shape": [
+        10
+      ]
+    },
+    "rfe_params": {
+      "estimator__C": 1.0,
+      "estimator__class_weight": null,
+      "estimator__dual": false,
+      "estimator__fit_intercept": true,
+      "estimator__intercept_scaling": 1,
+      "estimator__loss": "squared_hinge",
+      "estimator__max_iter": 1000,
+      "estimator__multi_class": "ovr",
+      "estimator__penalty": "l2",
+      "estimator__random_state": 42,
+      "estimator__tol": 0.0001,
+      "estimator__verbose": 0,
+      "estimator": "LinearSVC(dual=False, random_state=42)",
+      "importance_getter": "auto",
+      "n_features_to_select": 1000,
+      "step": 0.5,
+      "verbose": 1
+    },
+    "rfe_trained_attributes": {
+      "n_features_": 1000,
+      "support_sum": 1000,
+      "ranking_shape": [
+        21101
+      ]
+    }
+  }
+}

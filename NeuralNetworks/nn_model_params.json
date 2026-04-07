@@ -1,0 +1,4128 @@
+{
+  "NN_IRUS_RS_AE_bestmodel": {
+    "relative_path": "NN_IRUS_RS_AE_bestmodel.pkl",
+    "group_folder": ".",
+    "cohort": "TCGA",
+    "purified": false,
+    "sampler": "IRUS",
+    "uses_ae": true,
+    "load_method": "joblib_load",
+    "file_size_bytes": 1700999,
+    "file_size_mb": 1.62,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0)"
+        ],
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=32\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4B024740>, <__main__.HistoryLogger object at 0x000001CB01551E80>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.001\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.3\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=leakyrelu\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0)",
+      "nn": "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=32\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4B024740>, <__main__.HistoryLogger object at 0x000001CB01551E80>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.001\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.3\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=leakyrelu\n)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": "auto",
+      "nn__model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": "sparse_categorical_crossentropy",
+      "nn__metrics": null,
+      "nn__batch_size": 32,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4B024740>",
+        "<__main__.HistoryLogger object at 0x000001CB01551E80>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.001,
+      "nn__model__hidden_dim": 200,
+      "nn__model__dropout_rate2": 0.3,
+      "nn__model__dropout_rate1": 0.1,
+      "nn__model__activation": "leakyrelu"
+    },
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": "auto"
+    },
+    "nn_wrapper_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 32,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4B024740>",
+        "<__main__.HistoryLogger object at 0x000001CB01551E80>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.3,
+      "model__dropout_rate1": 0.1,
+      "model__activation": "leakyrelu"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 500,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        500
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 104005,
+      "optimizer": "Adam",
+      "learning_rate": 0.0010000000474974513,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 2000
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_500",
+        "class_name": "Dense",
+        "units": 200,
+        "activation": "linear",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 100200
+      },
+      {
+        "name": "leaky_re_lu_85",
+        "class_name": "LeakyReLU",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 800
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.3,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_501",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1005
+      }
+    ],
+    "training_history": null
+  },
+  "NN_IRUS_RS_bestmodel": {
+    "relative_path": "NN_IRUS_RS_bestmodel.pkl",
+    "group_folder": ".",
+    "cohort": "TCGA",
+    "purified": false,
+    "sampler": "IRUS",
+    "uses_ae": false,
+    "load_method": "joblib_load",
+    "file_size_bytes": 79734225,
+    "file_size_mb": 76.04,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0)"
+        ],
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_nn at 0x000001CB4B0440E0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=None\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4AFF9D90>, <__main__.HistoryLogger object at 0x000001CB48CAF050>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__dropout_rate2=0.1\n\tmodel__dropout_rate1=0.3\n\tmodel__activation=tanh\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0)",
+      "nn": "KerasClassifier(\n\tmodel=<function create_nn at 0x000001CB4B0440E0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=None\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4AFF9D90>, <__main__.HistoryLogger object at 0x000001CB48CAF050>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__dropout_rate2=0.1\n\tmodel__dropout_rate1=0.3\n\tmodel__activation=tanh\n)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": "auto",
+      "nn__model": "<function create_nn at 0x000001CB4B0440E0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": null,
+      "nn__metrics": null,
+      "nn__batch_size": 16,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4AFF9D90>",
+        "<__main__.HistoryLogger object at 0x000001CB48CAF050>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.0001,
+      "nn__model__dropout_rate2": 0.1,
+      "nn__model__dropout_rate1": 0.3,
+      "nn__model__activation": "tanh"
+    },
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": "auto"
+    },
+    "nn_wrapper_params": {
+      "model": "<function create_nn at 0x000001CB4B0440E0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": null,
+      "metrics": null,
+      "batch_size": 16,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4AFF9D90>",
+        "<__main__.HistoryLogger object at 0x000001CB48CAF050>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.0001,
+      "model__dropout_rate2": 0.1,
+      "model__dropout_rate1": 0.3,
+      "model__activation": "tanh"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 19277,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        19277
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 4970245,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "dense",
+        "class_name": "Dense",
+        "units": 256,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 4935168
+      },
+      {
+        "name": "batch_normalization",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1024
+      },
+      {
+        "name": "dropout",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.3,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_1",
+        "class_name": "Dense",
+        "units": 128,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 32896
+      },
+      {
+        "name": "batch_normalization_1",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 512
+      },
+      {
+        "name": "dropout_1",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_2",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 645
+      }
+    ],
+    "training_history": null
+  },
+  "NN_Norway_IRUS_RS_AE_bestmodel": {
+    "relative_path": "NN_Norway_IRUS_RS_AE_bestmodel.pkl",
+    "group_folder": ".",
+    "cohort": "Norway",
+    "purified": false,
+    "sampler": "IRUS",
+    "uses_ae": true,
+    "load_method": "joblib_load",
+    "file_size_bytes": 1699773,
+    "file_size_mb": 1.62,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0)"
+        ],
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB48CB3890>, <__main__.HistoryLogger object at 0x000001CB01909580>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.002\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.4\n\tmodel__dropout_rate1=0.2\n\tmodel__activation=leakyrelu\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0)",
+      "nn": "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB48CB3890>, <__main__.HistoryLogger object at 0x000001CB01909580>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.002\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.4\n\tmodel__dropout_rate1=0.2\n\tmodel__activation=leakyrelu\n)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": "auto",
+      "nn__model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": "sparse_categorical_crossentropy",
+      "nn__metrics": null,
+      "nn__batch_size": 16,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB48CB3890>",
+        "<__main__.HistoryLogger object at 0x000001CB01909580>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.002,
+      "nn__model__hidden_dim": 200,
+      "nn__model__dropout_rate2": 0.4,
+      "nn__model__dropout_rate1": 0.2,
+      "nn__model__activation": "leakyrelu"
+    },
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": "auto"
+    },
+    "nn_wrapper_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 16,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB48CB3890>",
+        "<__main__.HistoryLogger object at 0x000001CB01909580>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.002,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.4,
+      "model__dropout_rate1": 0.2,
+      "model__activation": "leakyrelu"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 500,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        500
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 104005,
+      "optimizer": "Adam",
+      "learning_rate": 0.0020000000949949026,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 2000
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.2,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_500",
+        "class_name": "Dense",
+        "units": 200,
+        "activation": "linear",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 100200
+      },
+      {
+        "name": "leaky_re_lu_85",
+        "class_name": "LeakyReLU",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 800
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.4,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_501",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1005
+      }
+    ],
+    "training_history": null
+  },
+  "NN_Norway_IRUS_RS_bestmodel": {
+    "relative_path": "NN_Norway_IRUS_RS_bestmodel.pkl",
+    "group_folder": ".",
+    "cohort": "Norway",
+    "purified": false,
+    "sampler": "IRUS",
+    "uses_ae": false,
+    "load_method": "joblib_load",
+    "file_size_bytes": 85940817,
+    "file_size_mb": 81.96,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0)"
+        ],
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_nn at 0x000001CB4B0440E0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=None\n\tmetrics=None\n\tbatch_size=64\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01929670>, <__main__.HistoryLogger object at 0x000001CB0199B020>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.001\n\tmodel__dropout_rate2=0.1\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=tanh\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0)",
+      "nn": "KerasClassifier(\n\tmodel=<function create_nn at 0x000001CB4B0440E0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=None\n\tmetrics=None\n\tbatch_size=64\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01929670>, <__main__.HistoryLogger object at 0x000001CB0199B020>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.001\n\tmodel__dropout_rate2=0.1\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=tanh\n)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": "auto",
+      "nn__model": "<function create_nn at 0x000001CB4B0440E0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": null,
+      "nn__metrics": null,
+      "nn__batch_size": 64,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01929670>",
+        "<__main__.HistoryLogger object at 0x000001CB0199B020>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.001,
+      "nn__model__dropout_rate2": 0.1,
+      "nn__model__dropout_rate1": 0.1,
+      "nn__model__activation": "tanh"
+    },
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": "auto"
+    },
+    "nn_wrapper_params": {
+      "model": "<function create_nn at 0x000001CB4B0440E0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": null,
+      "metrics": null,
+      "batch_size": 64,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01929670>",
+        "<__main__.HistoryLogger object at 0x000001CB0199B020>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.001,
+      "model__dropout_rate2": 0.1,
+      "model__dropout_rate1": 0.1,
+      "model__activation": "tanh"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 20789,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        20789
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 5357317,
+      "optimizer": "Adam",
+      "learning_rate": 0.0010000000474974513,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "dense",
+        "class_name": "Dense",
+        "units": 256,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 5322240
+      },
+      {
+        "name": "batch_normalization",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1024
+      },
+      {
+        "name": "dropout",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_1",
+        "class_name": "Dense",
+        "units": 128,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 32896
+      },
+      {
+        "name": "batch_normalization_1",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 512
+      },
+      {
+        "name": "dropout_1",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_2",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 645
+      }
+    ],
+    "training_history": null
+  },
+  "NN_Norway_RS_AE_bestmodel": {
+    "relative_path": "NN_Norway_RS_AE_bestmodel.pkl",
+    "group_folder": ".",
+    "cohort": "Norway",
+    "purified": false,
+    "sampler": "None",
+    "uses_ae": true,
+    "load_method": "joblib_load",
+    "file_size_bytes": 1696303,
+    "file_size_mb": 1.62,
+    "model_type": "KerasClassifier",
+    "pipeline_steps": [],
+    "pipeline_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 16,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01909310>",
+        "<__main__.HistoryLogger object at 0x000001CB4AC46690>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.0001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.3,
+      "model__dropout_rate1": 0.2,
+      "model__activation": "tanh"
+    },
+    "sampler_params": null,
+    "nn_wrapper_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 16,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01909310>",
+        "<__main__.HistoryLogger object at 0x000001CB4AC46690>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.0001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.3,
+      "model__dropout_rate1": 0.2,
+      "model__activation": "tanh"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 500,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        500
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 104005,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_946",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_1892",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 2000
+      },
+      {
+        "name": "dropout_1892",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.2,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_1892",
+        "class_name": "Dense",
+        "units": 200,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 100200
+      },
+      {
+        "name": "batch_normalization_1893",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 800
+      },
+      {
+        "name": "dropout_1893",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.3,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_1893",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1005
+      }
+    ],
+    "training_history": null
+  },
+  "NN_Norway_RS_bestmodel": {
+    "relative_path": "NN_Norway_RS_bestmodel.pkl",
+    "group_folder": ".",
+    "cohort": "Norway",
+    "purified": false,
+    "sampler": "None",
+    "uses_ae": false,
+    "load_method": "joblib_load",
+    "file_size_bytes": 85757651,
+    "file_size_mb": 81.78,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_nn at 0x000001CB4B0440E0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=None\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4B034470>, <__main__.HistoryLogger object at 0x000001CB4AA5F470>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__dropout_rate2=0.4\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=relu\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "nn": "KerasClassifier(\n\tmodel=<function create_nn at 0x000001CB4B0440E0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=None\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4B034470>, <__main__.HistoryLogger object at 0x000001CB4AA5F470>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__dropout_rate2=0.4\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=relu\n)",
+      "nn__model": "<function create_nn at 0x000001CB4B0440E0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": null,
+      "nn__metrics": null,
+      "nn__batch_size": 16,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4B034470>",
+        "<__main__.HistoryLogger object at 0x000001CB4AA5F470>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.0001,
+      "nn__model__dropout_rate2": 0.4,
+      "nn__model__dropout_rate1": 0.1,
+      "nn__model__activation": "relu"
+    },
+    "sampler_params": null,
+    "nn_wrapper_params": {
+      "model": "<function create_nn at 0x000001CB4B0440E0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": null,
+      "metrics": null,
+      "batch_size": 16,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4B034470>",
+        "<__main__.HistoryLogger object at 0x000001CB4AA5F470>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.0001,
+      "model__dropout_rate2": 0.4,
+      "model__dropout_rate1": 0.1,
+      "model__activation": "relu"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 20789,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        20789
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 5357317,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "dense_750",
+        "class_name": "Dense",
+        "units": 256,
+        "activation": "relu",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 5322240
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1024
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_751",
+        "class_name": "Dense",
+        "units": 128,
+        "activation": "relu",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 32896
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 512
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.4,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_752",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 645
+      }
+    ],
+    "training_history": null
+  },
+  "NN_Norway_SMOTE_RS_AE_bestmodel": {
+    "relative_path": "NN_Norway_SMOTE_RS_AE_bestmodel.pkl",
+    "group_folder": ".",
+    "cohort": "Norway",
+    "purified": false,
+    "sampler": "SMOTE",
+    "uses_ae": true,
+    "load_method": "joblib_load",
+    "file_size_bytes": 1717774,
+    "file_size_mb": 1.64,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(k_neighbors=7, random_state=0)"
+        ],
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4A9CCAD0>, <__main__.HistoryLogger object at 0x000001CB4AA63170>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.002\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.5\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=tanh\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(k_neighbors=7, random_state=0)",
+      "nn": "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4A9CCAD0>, <__main__.HistoryLogger object at 0x000001CB4AA63170>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.002\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.5\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=tanh\n)",
+      "smote__k_neighbors": 7,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "nn__model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": "sparse_categorical_crossentropy",
+      "nn__metrics": null,
+      "nn__batch_size": 16,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4A9CCAD0>",
+        "<__main__.HistoryLogger object at 0x000001CB4AA63170>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.002,
+      "nn__model__hidden_dim": 200,
+      "nn__model__dropout_rate2": 0.5,
+      "nn__model__dropout_rate1": 0.1,
+      "nn__model__activation": "tanh"
+    },
+    "sampler_params": {
+      "k_neighbors": 7,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "nn_wrapper_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 16,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB4A9CCAD0>",
+        "<__main__.HistoryLogger object at 0x000001CB4AA63170>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.002,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.5,
+      "model__dropout_rate1": 0.1,
+      "model__activation": "tanh"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 500,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        500
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 104005,
+      "optimizer": "Adam",
+      "learning_rate": 0.0020000000949949026,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 2000
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_500",
+        "class_name": "Dense",
+        "units": 200,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 100200
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 800
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.5,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_501",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1005
+      }
+    ],
+    "training_history": null
+  },
+  "NN_Norway_SMOTE_RS_bestmodel": {
+    "relative_path": "NN_Norway_SMOTE_RS_bestmodel.pkl",
+    "group_folder": ".",
+    "cohort": "Norway",
+    "purified": false,
+    "sampler": "SMOTE",
+    "uses_ae": false,
+    "load_method": "joblib_load",
+    "file_size_bytes": 87604252,
+    "file_size_mb": 83.55,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(random_state=0)"
+        ],
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_nn at 0x000001CB4B0440E0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=None\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01A647A0>, <__main__.HistoryLogger object at 0x000001CB0231E0C0>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=1e-05\n\tmodel__dropout_rate2=0.3\n\tmodel__dropout_rate1=0.3\n\tmodel__activation=tanh\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(random_state=0)",
+      "nn": "KerasClassifier(\n\tmodel=<function create_nn at 0x000001CB4B0440E0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=None\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01A647A0>, <__main__.HistoryLogger object at 0x000001CB0231E0C0>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=1e-05\n\tmodel__dropout_rate2=0.3\n\tmodel__dropout_rate1=0.3\n\tmodel__activation=tanh\n)",
+      "smote__k_neighbors": 5,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "nn__model": "<function create_nn at 0x000001CB4B0440E0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": null,
+      "nn__metrics": null,
+      "nn__batch_size": 16,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01A647A0>",
+        "<__main__.HistoryLogger object at 0x000001CB0231E0C0>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 1e-05,
+      "nn__model__dropout_rate2": 0.3,
+      "nn__model__dropout_rate1": 0.3,
+      "nn__model__activation": "tanh"
+    },
+    "sampler_params": {
+      "k_neighbors": 5,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "nn_wrapper_params": {
+      "model": "<function create_nn at 0x000001CB4B0440E0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": null,
+      "metrics": null,
+      "batch_size": 16,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01A647A0>",
+        "<__main__.HistoryLogger object at 0x000001CB0231E0C0>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 1e-05,
+      "model__dropout_rate2": 0.3,
+      "model__dropout_rate1": 0.3,
+      "model__activation": "tanh"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 20789,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        20789
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 5357317,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-06,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "dense",
+        "class_name": "Dense",
+        "units": 256,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 5322240
+      },
+      {
+        "name": "batch_normalization",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1024
+      },
+      {
+        "name": "dropout",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.3,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_1",
+        "class_name": "Dense",
+        "units": 128,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 32896
+      },
+      {
+        "name": "batch_normalization_1",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 512
+      },
+      {
+        "name": "dropout_1",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.3,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_2",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 645
+      }
+    ],
+    "training_history": null
+  },
+  "NN_RS_AE_bestmodel": {
+    "relative_path": "NN_RS_AE_bestmodel.pkl",
+    "group_folder": ".",
+    "cohort": "TCGA",
+    "purified": false,
+    "sampler": "None",
+    "uses_ae": true,
+    "load_method": "joblib_load",
+    "file_size_bytes": 1699393,
+    "file_size_mb": 1.62,
+    "model_type": "KerasClassifier",
+    "pipeline_steps": [],
+    "pipeline_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 64,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB0144C8C0>",
+        "<__main__.HistoryLogger object at 0x000001CB01A67A40>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.4,
+      "model__dropout_rate1": 0.1,
+      "model__activation": "relu"
+    },
+    "sampler_params": null,
+    "nn_wrapper_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 64,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB0144C8C0>",
+        "<__main__.HistoryLogger object at 0x000001CB01A67A40>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.4,
+      "model__dropout_rate1": 0.1,
+      "model__activation": "relu"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 500,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        500
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 104005,
+      "optimizer": "Adam",
+      "learning_rate": 0.0010000000474974513,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 2000
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_500",
+        "class_name": "Dense",
+        "units": 200,
+        "activation": "linear",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 100200
+      },
+      {
+        "name": "re_lu_65",
+        "class_name": "ReLU",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 800
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.4,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_501",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1005
+      }
+    ],
+    "training_history": null
+  },
+  "NN_RS_bestmodel": {
+    "relative_path": "NN_RS_bestmodel.pkl",
+    "group_folder": ".",
+    "cohort": "TCGA",
+    "purified": false,
+    "sampler": "None",
+    "uses_ae": false,
+    "load_method": "joblib_load",
+    "file_size_bytes": 79564571,
+    "file_size_mb": 75.88,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_nn at 0x000001CB4B0440E0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=None\n\tmetrics=None\n\tbatch_size=64\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB019BBA10>, <__main__.HistoryLogger object at 0x000001CB01A8D490>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__dropout_rate2=0.1\n\tmodel__dropout_rate1=0.2\n\tmodel__activation=tanh\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "nn": "KerasClassifier(\n\tmodel=<function create_nn at 0x000001CB4B0440E0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=None\n\tmetrics=None\n\tbatch_size=64\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB019BBA10>, <__main__.HistoryLogger object at 0x000001CB01A8D490>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__dropout_rate2=0.1\n\tmodel__dropout_rate1=0.2\n\tmodel__activation=tanh\n)",
+      "nn__model": "<function create_nn at 0x000001CB4B0440E0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": null,
+      "nn__metrics": null,
+      "nn__batch_size": 64,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB019BBA10>",
+        "<__main__.HistoryLogger object at 0x000001CB01A8D490>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.0001,
+      "nn__model__dropout_rate2": 0.1,
+      "nn__model__dropout_rate1": 0.2,
+      "nn__model__activation": "tanh"
+    },
+    "sampler_params": null,
+    "nn_wrapper_params": {
+      "model": "<function create_nn at 0x000001CB4B0440E0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": null,
+      "metrics": null,
+      "batch_size": 64,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB019BBA10>",
+        "<__main__.HistoryLogger object at 0x000001CB01A8D490>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.0001,
+      "model__dropout_rate2": 0.1,
+      "model__dropout_rate1": 0.2,
+      "model__activation": "tanh"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 19277,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        19277
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 4970245,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "dense_750",
+        "class_name": "Dense",
+        "units": 256,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 4935168
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1024
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.2,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_751",
+        "class_name": "Dense",
+        "units": 128,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 32896
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 512
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_752",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 645
+      }
+    ],
+    "training_history": null
+  },
+  "NN_SMOTE_RS_AE_bestmodel": {
+    "relative_path": "NN_SMOTE_RS_AE_bestmodel.pkl",
+    "group_folder": ".",
+    "cohort": "TCGA",
+    "purified": false,
+    "sampler": "SMOTE",
+    "uses_ae": true,
+    "load_method": "joblib_load",
+    "file_size_bytes": 1838062,
+    "file_size_mb": 1.75,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(random_state=0)"
+        ],
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=64\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB019099D0>, <__main__.HistoryLogger object at 0x000001CB01A432C0>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.5\n\tmodel__dropout_rate1=0.3\n\tmodel__activation=tanh\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(random_state=0)",
+      "nn": "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=64\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB019099D0>, <__main__.HistoryLogger object at 0x000001CB01A432C0>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.5\n\tmodel__dropout_rate1=0.3\n\tmodel__activation=tanh\n)",
+      "smote__k_neighbors": 5,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "nn__model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": "sparse_categorical_crossentropy",
+      "nn__metrics": null,
+      "nn__batch_size": 64,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB019099D0>",
+        "<__main__.HistoryLogger object at 0x000001CB01A432C0>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.0001,
+      "nn__model__hidden_dim": 200,
+      "nn__model__dropout_rate2": 0.5,
+      "nn__model__dropout_rate1": 0.3,
+      "nn__model__activation": "tanh"
+    },
+    "sampler_params": {
+      "k_neighbors": 5,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "nn_wrapper_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 64,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB019099D0>",
+        "<__main__.HistoryLogger object at 0x000001CB01A432C0>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.0001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.5,
+      "model__dropout_rate1": 0.3,
+      "model__activation": "tanh"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 500,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        500
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 104005,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 2000
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.3,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_500",
+        "class_name": "Dense",
+        "units": 200,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 100200
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 800
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.5,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_501",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1005
+      }
+    ],
+    "training_history": null
+  },
+  "NN_SMOTE_RS_bestmodel": {
+    "relative_path": "NN_SMOTE_RS_bestmodel.pkl",
+    "group_folder": ".",
+    "cohort": "TCGA",
+    "purified": false,
+    "sampler": "SMOTE",
+    "uses_ae": false,
+    "load_method": "joblib_load",
+    "file_size_bytes": 90528452,
+    "file_size_mb": 86.33,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(k_neighbors=7, random_state=0)"
+        ],
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_nn at 0x000001CB4B0440E0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=None\n\tmetrics=None\n\tbatch_size=128\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01B48FB0>, <__main__.HistoryLogger object at 0x000001CB01BABCB0>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__dropout_rate2=0.1\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=relu\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(k_neighbors=7, random_state=0)",
+      "nn": "KerasClassifier(\n\tmodel=<function create_nn at 0x000001CB4B0440E0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=None\n\tmetrics=None\n\tbatch_size=128\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01B48FB0>, <__main__.HistoryLogger object at 0x000001CB01BABCB0>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__dropout_rate2=0.1\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=relu\n)",
+      "smote__k_neighbors": 7,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "nn__model": "<function create_nn at 0x000001CB4B0440E0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": null,
+      "nn__metrics": null,
+      "nn__batch_size": 128,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01B48FB0>",
+        "<__main__.HistoryLogger object at 0x000001CB01BABCB0>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.0001,
+      "nn__model__dropout_rate2": 0.1,
+      "nn__model__dropout_rate1": 0.1,
+      "nn__model__activation": "relu"
+    },
+    "sampler_params": {
+      "k_neighbors": 7,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "nn_wrapper_params": {
+      "model": "<function create_nn at 0x000001CB4B0440E0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": null,
+      "metrics": null,
+      "batch_size": 128,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01B48FB0>",
+        "<__main__.HistoryLogger object at 0x000001CB01BABCB0>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.0001,
+      "model__dropout_rate2": 0.1,
+      "model__dropout_rate1": 0.1,
+      "model__activation": "relu"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 19277,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        19277
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 4970245,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "dense",
+        "class_name": "Dense",
+        "units": 256,
+        "activation": "relu",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 4935168
+      },
+      {
+        "name": "batch_normalization",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1024
+      },
+      {
+        "name": "dropout",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_1",
+        "class_name": "Dense",
+        "units": 128,
+        "activation": "relu",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 32896
+      },
+      {
+        "name": "batch_normalization_1",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 512
+      },
+      {
+        "name": "dropout_1",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_2",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 645
+      }
+    ],
+    "training_history": null
+  },
+  "NN_IRUS_RS_AE_Purified_bestmodel": {
+    "relative_path": "Purified\\NN_IRUS_RS_AE_Purified_bestmodel.pkl",
+    "group_folder": "Purified",
+    "cohort": "TCGA",
+    "purified": true,
+    "sampler": "IRUS",
+    "uses_ae": true,
+    "load_method": "joblib_load",
+    "file_size_bytes": 1698787,
+    "file_size_mb": 1.62,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0)"
+        ],
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB0231EBD0>, <__main__.HistoryLogger object at 0x000001CB01A43C20>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.1\n\tmodel__dropout_rate1=0.3\n\tmodel__activation=tanh\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0)",
+      "nn": "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB0231EBD0>, <__main__.HistoryLogger object at 0x000001CB01A43C20>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.1\n\tmodel__dropout_rate1=0.3\n\tmodel__activation=tanh\n)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": "auto",
+      "nn__model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": "sparse_categorical_crossentropy",
+      "nn__metrics": null,
+      "nn__batch_size": 16,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB0231EBD0>",
+        "<__main__.HistoryLogger object at 0x000001CB01A43C20>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.0001,
+      "nn__model__hidden_dim": 200,
+      "nn__model__dropout_rate2": 0.1,
+      "nn__model__dropout_rate1": 0.3,
+      "nn__model__activation": "tanh"
+    },
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": "auto"
+    },
+    "nn_wrapper_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 16,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB0231EBD0>",
+        "<__main__.HistoryLogger object at 0x000001CB01A43C20>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.0001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.1,
+      "model__dropout_rate1": 0.3,
+      "model__activation": "tanh"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 500,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        500
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 104005,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 2000
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.3,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_500",
+        "class_name": "Dense",
+        "units": 200,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 100200
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 800
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_501",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1005
+      }
+    ],
+    "training_history": null
+  },
+  "NN_IRUS_RS_Purified_bestmodel": {
+    "relative_path": "Purified\\NN_IRUS_RS_Purified_bestmodel.pkl",
+    "group_folder": "Purified",
+    "cohort": "TCGA",
+    "purified": true,
+    "sampler": "IRUS",
+    "uses_ae": false,
+    "load_method": "fallback_pickle_parse",
+    "file_size_bytes": 79733812,
+    "file_size_mb": 76.04,
+    "model_type": "Keras/SciKeras pickle (fallback parsed)",
+    "pipeline_steps": [
+      "irus",
+      "nn"
+    ],
+    "pipeline_params": null,
+    "sampler_params": null,
+    "nn_wrapper_params": {
+      "epochs": 1,
+      "batch_size": 16,
+      "random_state": 0
+    },
+    "trained_attributes": {
+      "n_features_in_": 19277,
+      "input_shape": "(None, 19277)",
+      "output_shape": "(None, 5)",
+      "n_classes": 5,
+      "total_trainable_params": 4970245,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": "['accuracy']",
+      "keras_version": "3.13.2"
+    },
+    "layer_details": [
+      {
+        "name": "input_layer",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 19277)",
+        "count_params": 0
+      },
+      {
+        "name": "dense",
+        "class_name": "Dense",
+        "units": 256,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 4935168
+      },
+      {
+        "name": "batch_normalization",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 1024
+      },
+      {
+        "name": "dropout",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": null,
+        "rate": 0.3,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_1",
+        "class_name": "Dense",
+        "units": 128,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 32896
+      },
+      {
+        "name": "batch_normalization_1",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 512
+      },
+      {
+        "name": "dropout_1",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": null,
+        "rate": 0.1,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_2",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 5)",
+        "count_params": 645
+      }
+    ],
+    "training_history": null,
+    "load_error": {
+      "error_type": "TypeError",
+      "error": "<class 'keras.src.models.sequential.Sequential'> could not be deserialized properly. Please ensure that components that are Python object instances (layers, models, etc.) returned by `get_config()` are explicitly deserialized in the model's `from_config()` method.\n\nconfig={'module': 'keras', 'class_name': 'Sequential', 'config': {'name': 'sequential', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'layers': [{'module': 'keras.layers', 'class_name': 'InputLayer', 'config': {'batch_shape': [None, 19277], 'dtype': 'float32', 'sparse': False, 'ragged': False, 'name': 'input_layer', 'optional': False}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None}, 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 19277]}}, {'module': 'keras.layers', 'class_name': 'BatchNormalization', 'config': {'name': 'batch_normalization', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'axis': -1, 'momentum': 0.99, 'epsilon': 0.001, 'center': True, 'scale': True, 'beta_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'gamma_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'moving_mean_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'moving_variance_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'beta_regularizer': None, 'gamma_regularizer': None, 'beta_constraint': None, 'gamma_constraint': None, 'synchronized': False}, 'registered_name': None, 'build_config': {'input_shape': [None, 256]}}, {'module': 'keras.layers', 'class_name': 'Dropout', 'config': {'name': 'dropout', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'rate': 0.3, 'seed': None, 'noise_shape': None}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_1', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'units': 128, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 256]}}, {'module': 'keras.layers', 'class_name': 'BatchNormalization', 'config': {'name': 'batch_normalization_1', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'axis': -1, 'momentum': 0.99, 'epsilon': 0.001, 'center': True, 'scale': True, 'beta_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'gamma_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'moving_mean_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'moving_variance_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'beta_regularizer': None, 'gamma_regularizer': None, 'beta_constraint': None, 'gamma_constraint': None, 'synchronized': False}, 'registered_name': None, 'build_config': {'input_shape': [None, 128]}}, {'module': 'keras.layers', 'class_name': 'Dropout', 'config': {'name': 'dropout_1', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'rate': 0.1, 'seed': None, 'noise_shape': None}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_2', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'units': 5, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 128]}}], 'build_input_shape': [None, 19277]}, 'registered_name': None, 'build_config': {'input_shape': [None, 19277]}, 'compile_config': {'optimizer': {'module': 'keras.optimizers', 'class_name': 'Adam', 'config': {'name': 'adam', 'learning_rate': 9.999999747378752e-05, 'weight_decay': None, 'clipnorm': None, 'global_clipnorm': None, 'clipvalue': None, 'use_ema': False, 'ema_momentum': 0.99, 'ema_overwrite_frequency': None, 'loss_scale_factor': None, 'gradient_accumulation_steps': None, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': False}, 'registered_name': None}, 'loss': 'sparse_categorical_crossentropy', 'loss_weights': None, 'metrics': ['accuracy'], 'weighted_metrics': None, 'run_eagerly': False, 'steps_per_execution': 1, 'jit_compile': False}}.\n\nException encountered: <class 'keras.src.layers.core.dense.Dense'> could not be deserialized properly. Please ensure that components that are Python object instances (layers, models, etc.) returned by `get_config()` are explicitly deserialized in the model's `from_config()` method.\n\nconfig={'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None}, 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 19277]}}.\n\nException encountered: Error when deserializing class 'Dense' using config={'name': 'dense', 'trainable': True, 'dtype': 'float32', 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}.\n\nException encountered: Unrecognized keyword arguments passed to Dense: {'quantization_config': None}",
+      "error_repr": "TypeError(\"<class 'keras.src.models.sequential.Sequential'> could not be deserialized properly. Please ensure that components that are Python object instances (layers, models, etc.) returned by `get_config()` are explicitly deserialized in the model's `from_config()` method.\\n\\nconfig={'module': 'keras', 'class_name': 'Sequential', 'config': {'name': 'sequential', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'layers': [{'module': 'keras.layers', 'class_name': 'InputLayer', 'config': {'batch_shape': [None, 19277], 'dtype': 'float32', 'sparse': False, 'ragged': False, 'name': 'input_layer', 'optional': False}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None}, 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 19277]}}, {'module': 'keras.layers', 'class_name': 'BatchNormalization', 'config': {'name': 'batch_normalization', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'axis': -1, 'momentum': 0.99, 'epsilon': 0.001, 'center': True, 'scale': True, 'beta_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'gamma_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'moving_mean_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'moving_variance_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'beta_regularizer': None, 'gamma_regularizer': None, 'beta_constraint': None, 'gamma_constraint': None, 'synchronized': False}, 'registered_name': None, 'build_config': {'input_shape': [None, 256]}}, {'module': 'keras.layers', 'class_name': 'Dropout', 'config': {'name': 'dropout', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'rate': 0.3, 'seed': None, 'noise_shape': None}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_1', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'units': 128, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 256]}}, {'module': 'keras.layers', 'class_name': 'BatchNormalization', 'config': {'name': 'batch_normalization_1', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'axis': -1, 'momentum': 0.99, 'epsilon': 0.001, 'center': True, 'scale': True, 'beta_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'gamma_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'moving_mean_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'moving_variance_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'beta_regularizer': None, 'gamma_regularizer': None, 'beta_constraint': None, 'gamma_constraint': None, 'synchronized': False}, 'registered_name': None, 'build_config': {'input_shape': [None, 128]}}, {'module': 'keras.layers', 'class_name': 'Dropout', 'config': {'name': 'dropout_1', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'rate': 0.1, 'seed': None, 'noise_shape': None}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_2', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2517392440608}, 'units': 5, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 128]}}], 'build_input_shape': [None, 19277]}, 'registered_name': None, 'build_config': {'input_shape': [None, 19277]}, 'compile_config': {'optimizer': {'module': 'keras.optimizers', 'class_name': 'Adam', 'config': {'name': 'adam', 'learning_rate': 9.999999747378752e-05, 'weight_decay': None, 'clipnorm': None, 'global_clipnorm': None, 'clipvalue': None, 'use_ema': False, 'ema_momentum': 0.99, 'ema_overwrite_frequency': None, 'loss_scale_factor': None, 'gradient_accumulation_steps': None, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': False}, 'registered_name': None}, 'loss': 'sparse_categorical_crossentropy', 'loss_weights': None, 'metrics': ['accuracy'], 'weighted_metrics': None, 'run_eagerly': False, 'steps_per_execution': 1, 'jit_compile': False}}.\\n\\nException encountered: <class 'keras.src.layers.core.dense.Dense'> could not be deserialized properly. Please ensure that components that are Python object instances (layers, models, etc.) returned by `get_config()` are explicitly deserialized in the model's `from_config()` method.\\n\\nconfig={'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None}, 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 19277]}}.\\n\\nException encountered: Error when deserializing class 'Dense' using config={'name': 'dense', 'trainable': True, 'dtype': 'float32', 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}.\\n\\nException encountered: Unrecognized keyword arguments passed to Dense: {'quantization_config': None}\")"
+    }
+  },
+  "NN_Norway_IRUS_RS_AE_Purified_bestmodel": {
+    "relative_path": "Purified\\NN_Norway_IRUS_RS_AE_Purified_bestmodel.pkl",
+    "group_folder": "Purified",
+    "cohort": "Norway",
+    "purified": true,
+    "sampler": "IRUS",
+    "uses_ae": true,
+    "load_method": "joblib_load",
+    "file_size_bytes": 1697239,
+    "file_size_mb": 1.62,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "irus",
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "irus",
+          "RandomUnderSampler(random_state=0)"
+        ],
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01BC7B00>, <__main__.HistoryLogger object at 0x000001CB01A04590>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.3\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=tanh\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "irus": "RandomUnderSampler(random_state=0)",
+      "nn": "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01BC7B00>, <__main__.HistoryLogger object at 0x000001CB01A04590>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.0001\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.3\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=tanh\n)",
+      "irus__random_state": 0,
+      "irus__replacement": false,
+      "irus__sampling_strategy": "auto",
+      "nn__model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": "sparse_categorical_crossentropy",
+      "nn__metrics": null,
+      "nn__batch_size": 16,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01BC7B00>",
+        "<__main__.HistoryLogger object at 0x000001CB01A04590>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.0001,
+      "nn__model__hidden_dim": 200,
+      "nn__model__dropout_rate2": 0.3,
+      "nn__model__dropout_rate1": 0.1,
+      "nn__model__activation": "tanh"
+    },
+    "sampler_params": {
+      "random_state": 0,
+      "replacement": false,
+      "sampling_strategy": "auto"
+    },
+    "nn_wrapper_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 16,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01BC7B00>",
+        "<__main__.HistoryLogger object at 0x000001CB01A04590>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.0001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.3,
+      "model__dropout_rate1": 0.1,
+      "model__activation": "tanh"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 500,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        500
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 104005,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 2000
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_500",
+        "class_name": "Dense",
+        "units": 200,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 100200
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 800
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.3,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_501",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1005
+      }
+    ],
+    "training_history": null
+  },
+  "NN_Norway_IRUS_RS_Purified_bestmodel": {
+    "relative_path": "Purified\\NN_Norway_IRUS_RS_Purified_bestmodel.pkl",
+    "group_folder": "Purified",
+    "cohort": "Norway",
+    "purified": true,
+    "sampler": "IRUS",
+    "uses_ae": false,
+    "load_method": "fallback_pickle_parse",
+    "file_size_bytes": 87222332,
+    "file_size_mb": 83.18,
+    "model_type": "Keras/SciKeras pickle (fallback parsed)",
+    "pipeline_steps": [
+      "irus",
+      "nn"
+    ],
+    "pipeline_params": null,
+    "sampler_params": null,
+    "nn_wrapper_params": {
+      "epochs": 1,
+      "batch_size": 16,
+      "random_state": 0
+    },
+    "trained_attributes": {
+      "n_features_in_": 21101,
+      "input_shape": "(None, 21101)",
+      "output_shape": "(None, 5)",
+      "n_classes": 5,
+      "total_trainable_params": 5437189,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": "['accuracy']",
+      "keras_version": "3.13.2"
+    },
+    "layer_details": [
+      {
+        "name": "input_layer",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 21101)",
+        "count_params": 0
+      },
+      {
+        "name": "dense",
+        "class_name": "Dense",
+        "units": 256,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 5402112
+      },
+      {
+        "name": "batch_normalization",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 1024
+      },
+      {
+        "name": "dropout",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": null,
+        "rate": 0.1,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_1",
+        "class_name": "Dense",
+        "units": 128,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 32896
+      },
+      {
+        "name": "batch_normalization_1",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 512
+      },
+      {
+        "name": "dropout_1",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": null,
+        "rate": 0.3,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_2",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 5)",
+        "count_params": 645
+      }
+    ],
+    "training_history": null,
+    "load_error": {
+      "error_type": "TypeError",
+      "error": "<class 'keras.src.models.sequential.Sequential'> could not be deserialized properly. Please ensure that components that are Python object instances (layers, models, etc.) returned by `get_config()` are explicitly deserialized in the model's `from_config()` method.\n\nconfig={'module': 'keras', 'class_name': 'Sequential', 'config': {'name': 'sequential', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'layers': [{'module': 'keras.layers', 'class_name': 'InputLayer', 'config': {'batch_shape': [None, 21101], 'dtype': 'float32', 'sparse': False, 'ragged': False, 'name': 'input_layer', 'optional': False}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None}, 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 21101]}}, {'module': 'keras.layers', 'class_name': 'BatchNormalization', 'config': {'name': 'batch_normalization', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'axis': -1, 'momentum': 0.99, 'epsilon': 0.001, 'center': True, 'scale': True, 'beta_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'gamma_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'moving_mean_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'moving_variance_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'beta_regularizer': None, 'gamma_regularizer': None, 'beta_constraint': None, 'gamma_constraint': None, 'synchronized': False}, 'registered_name': None, 'build_config': {'input_shape': [None, 256]}}, {'module': 'keras.layers', 'class_name': 'Dropout', 'config': {'name': 'dropout', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'rate': 0.1, 'seed': None, 'noise_shape': None}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_1', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'units': 128, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 256]}}, {'module': 'keras.layers', 'class_name': 'BatchNormalization', 'config': {'name': 'batch_normalization_1', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'axis': -1, 'momentum': 0.99, 'epsilon': 0.001, 'center': True, 'scale': True, 'beta_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'gamma_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'moving_mean_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'moving_variance_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'beta_regularizer': None, 'gamma_regularizer': None, 'beta_constraint': None, 'gamma_constraint': None, 'synchronized': False}, 'registered_name': None, 'build_config': {'input_shape': [None, 128]}}, {'module': 'keras.layers', 'class_name': 'Dropout', 'config': {'name': 'dropout_1', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'rate': 0.3, 'seed': None, 'noise_shape': None}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_2', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'units': 5, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 128]}}], 'build_input_shape': [None, 21101]}, 'registered_name': None, 'build_config': {'input_shape': [None, 21101]}, 'compile_config': {'optimizer': {'module': 'keras.optimizers', 'class_name': 'Adam', 'config': {'name': 'adam', 'learning_rate': 9.999999747378752e-05, 'weight_decay': None, 'clipnorm': None, 'global_clipnorm': None, 'clipvalue': None, 'use_ema': False, 'ema_momentum': 0.99, 'ema_overwrite_frequency': None, 'loss_scale_factor': None, 'gradient_accumulation_steps': None, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': False}, 'registered_name': None}, 'loss': 'sparse_categorical_crossentropy', 'loss_weights': None, 'metrics': ['accuracy'], 'weighted_metrics': None, 'run_eagerly': False, 'steps_per_execution': 1, 'jit_compile': False}}.\n\nException encountered: <class 'keras.src.layers.core.dense.Dense'> could not be deserialized properly. Please ensure that components that are Python object instances (layers, models, etc.) returned by `get_config()` are explicitly deserialized in the model's `from_config()` method.\n\nconfig={'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None}, 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 21101]}}.\n\nException encountered: Error when deserializing class 'Dense' using config={'name': 'dense', 'trainable': True, 'dtype': 'float32', 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}.\n\nException encountered: Unrecognized keyword arguments passed to Dense: {'quantization_config': None}",
+      "error_repr": "TypeError(\"<class 'keras.src.models.sequential.Sequential'> could not be deserialized properly. Please ensure that components that are Python object instances (layers, models, etc.) returned by `get_config()` are explicitly deserialized in the model's `from_config()` method.\\n\\nconfig={'module': 'keras', 'class_name': 'Sequential', 'config': {'name': 'sequential', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'layers': [{'module': 'keras.layers', 'class_name': 'InputLayer', 'config': {'batch_shape': [None, 21101], 'dtype': 'float32', 'sparse': False, 'ragged': False, 'name': 'input_layer', 'optional': False}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None}, 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 21101]}}, {'module': 'keras.layers', 'class_name': 'BatchNormalization', 'config': {'name': 'batch_normalization', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'axis': -1, 'momentum': 0.99, 'epsilon': 0.001, 'center': True, 'scale': True, 'beta_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'gamma_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'moving_mean_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'moving_variance_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'beta_regularizer': None, 'gamma_regularizer': None, 'beta_constraint': None, 'gamma_constraint': None, 'synchronized': False}, 'registered_name': None, 'build_config': {'input_shape': [None, 256]}}, {'module': 'keras.layers', 'class_name': 'Dropout', 'config': {'name': 'dropout', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'rate': 0.1, 'seed': None, 'noise_shape': None}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_1', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'units': 128, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 256]}}, {'module': 'keras.layers', 'class_name': 'BatchNormalization', 'config': {'name': 'batch_normalization_1', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'axis': -1, 'momentum': 0.99, 'epsilon': 0.001, 'center': True, 'scale': True, 'beta_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'gamma_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'moving_mean_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'moving_variance_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'beta_regularizer': None, 'gamma_regularizer': None, 'beta_constraint': None, 'gamma_constraint': None, 'synchronized': False}, 'registered_name': None, 'build_config': {'input_shape': [None, 128]}}, {'module': 'keras.layers', 'class_name': 'Dropout', 'config': {'name': 'dropout_1', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'rate': 0.3, 'seed': None, 'noise_shape': None}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_2', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 2805916450640}, 'units': 5, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 128]}}], 'build_input_shape': [None, 21101]}, 'registered_name': None, 'build_config': {'input_shape': [None, 21101]}, 'compile_config': {'optimizer': {'module': 'keras.optimizers', 'class_name': 'Adam', 'config': {'name': 'adam', 'learning_rate': 9.999999747378752e-05, 'weight_decay': None, 'clipnorm': None, 'global_clipnorm': None, 'clipvalue': None, 'use_ema': False, 'ema_momentum': 0.99, 'ema_overwrite_frequency': None, 'loss_scale_factor': None, 'gradient_accumulation_steps': None, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': False}, 'registered_name': None}, 'loss': 'sparse_categorical_crossentropy', 'loss_weights': None, 'metrics': ['accuracy'], 'weighted_metrics': None, 'run_eagerly': False, 'steps_per_execution': 1, 'jit_compile': False}}.\\n\\nException encountered: <class 'keras.src.layers.core.dense.Dense'> could not be deserialized properly. Please ensure that components that are Python object instances (layers, models, etc.) returned by `get_config()` are explicitly deserialized in the model's `from_config()` method.\\n\\nconfig={'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None}, 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 21101]}}.\\n\\nException encountered: Error when deserializing class 'Dense' using config={'name': 'dense', 'trainable': True, 'dtype': 'float32', 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}.\\n\\nException encountered: Unrecognized keyword arguments passed to Dense: {'quantization_config': None}\")"
+    }
+  },
+  "NN_Norway_RS_AE_Purified_bestmodel": {
+    "relative_path": "Purified\\NN_Norway_RS_AE_Purified_bestmodel.pkl",
+    "group_folder": "Purified",
+    "cohort": "Norway",
+    "purified": true,
+    "sampler": "None",
+    "uses_ae": true,
+    "load_method": "joblib_load",
+    "file_size_bytes": 1699557,
+    "file_size_mb": 1.62,
+    "model_type": "KerasClassifier",
+    "pipeline_steps": [],
+    "pipeline_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 16,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01AC0200>",
+        "<__main__.HistoryLogger object at 0x000001CB01551DF0>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.1,
+      "model__dropout_rate1": 0.2,
+      "model__activation": "leakyrelu"
+    },
+    "sampler_params": null,
+    "nn_wrapper_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 16,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01AC0200>",
+        "<__main__.HistoryLogger object at 0x000001CB01551DF0>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.1,
+      "model__dropout_rate1": 0.2,
+      "model__activation": "leakyrelu"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 500,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        500
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 104005,
+      "optimizer": "Adam",
+      "learning_rate": 0.0010000000474974513,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 2000
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.2,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_500",
+        "class_name": "Dense",
+        "units": 200,
+        "activation": "linear",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 100200
+      },
+      {
+        "name": "leaky_re_lu_85",
+        "class_name": "LeakyReLU",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 800
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_501",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1005
+      }
+    ],
+    "training_history": null
+  },
+  "NN_Norway_RS_Purified_bestmodel": {
+    "relative_path": "Purified\\NN_Norway_RS_Purified_bestmodel.pkl",
+    "group_folder": "Purified",
+    "cohort": "Norway",
+    "purified": true,
+    "sampler": "None",
+    "uses_ae": false,
+    "load_method": "fallback_pickle_parse",
+    "file_size_bytes": 87046935,
+    "file_size_mb": 83.01,
+    "model_type": "Keras/SciKeras pickle (fallback parsed)",
+    "pipeline_steps": [
+      "nn"
+    ],
+    "pipeline_params": null,
+    "sampler_params": null,
+    "nn_wrapper_params": {
+      "epochs": 1,
+      "batch_size": 32,
+      "random_state": 0
+    },
+    "trained_attributes": {
+      "n_features_in_": 21101,
+      "input_shape": "(None, 21101)",
+      "output_shape": "(None, 5)",
+      "n_classes": 5,
+      "total_trainable_params": 5437189,
+      "optimizer": "Adam",
+      "learning_rate": 0.0010000000474974513,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": "['accuracy']",
+      "keras_version": "3.12.0"
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 21101)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_750",
+        "class_name": "Dense",
+        "units": 256,
+        "activation": "LeakyReLU",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 5402112
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 1024
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": null,
+        "rate": 0.1,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_751",
+        "class_name": "Dense",
+        "units": 128,
+        "activation": "LeakyReLU",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 32896
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 512
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": null,
+        "rate": 0.1,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_752",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 5)",
+        "count_params": 645
+      }
+    ],
+    "training_history": null,
+    "load_error": {
+      "error_type": "TypeError",
+      "error": "'module' object does not support item assignment",
+      "error_repr": "TypeError(\"'module' object does not support item assignment\")"
+    }
+  },
+  "NN_Norway_SMOTE_RS_AE_Purified_bestmodel": {
+    "relative_path": "Purified\\NN_Norway_SMOTE_RS_AE_Purified_bestmodel.pkl",
+    "group_folder": "Purified",
+    "cohort": "Norway",
+    "purified": true,
+    "sampler": "SMOTE",
+    "uses_ae": true,
+    "load_method": "joblib_load",
+    "file_size_bytes": 1725720,
+    "file_size_mb": 1.65,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(k_neighbors=7, random_state=0)"
+        ],
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=32\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB018EA7E0>, <__main__.HistoryLogger object at 0x000001CB01A41C70>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.001\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.3\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=tanh\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(k_neighbors=7, random_state=0)",
+      "nn": "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=32\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB018EA7E0>, <__main__.HistoryLogger object at 0x000001CB01A41C70>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.001\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.3\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=tanh\n)",
+      "smote__k_neighbors": 7,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "nn__model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": "sparse_categorical_crossentropy",
+      "nn__metrics": null,
+      "nn__batch_size": 32,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB018EA7E0>",
+        "<__main__.HistoryLogger object at 0x000001CB01A41C70>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.001,
+      "nn__model__hidden_dim": 200,
+      "nn__model__dropout_rate2": 0.3,
+      "nn__model__dropout_rate1": 0.1,
+      "nn__model__activation": "tanh"
+    },
+    "sampler_params": {
+      "k_neighbors": 7,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "nn_wrapper_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 32,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB018EA7E0>",
+        "<__main__.HistoryLogger object at 0x000001CB01A41C70>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.3,
+      "model__dropout_rate1": 0.1,
+      "model__activation": "tanh"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 500,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        500
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 104005,
+      "optimizer": "Adam",
+      "learning_rate": 0.0010000000474974513,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 2000
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_500",
+        "class_name": "Dense",
+        "units": 200,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 100200
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 800
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.3,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_501",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1005
+      }
+    ],
+    "training_history": null
+  },
+  "NN_Norway_SMOTE_RS_Purified_bestmodel": {
+    "relative_path": "Purified\\NN_Norway_SMOTE_RS_Purified_bestmodel.pkl",
+    "group_folder": "Purified",
+    "cohort": "Norway",
+    "purified": true,
+    "sampler": "SMOTE",
+    "uses_ae": false,
+    "load_method": "fallback_pickle_parse",
+    "file_size_bytes": 89596734,
+    "file_size_mb": 85.45,
+    "model_type": "Keras/SciKeras pickle (fallback parsed)",
+    "pipeline_steps": [
+      "smote",
+      "nn"
+    ],
+    "pipeline_params": null,
+    "sampler_params": {
+      "k_neighbors": 7
+    },
+    "nn_wrapper_params": {
+      "epochs": 1,
+      "batch_size": 32,
+      "random_state": 0
+    },
+    "trained_attributes": {
+      "n_features_in_": 21101,
+      "input_shape": "(None, 21101)",
+      "output_shape": "(None, 5)",
+      "n_classes": 5,
+      "total_trainable_params": 5437189,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": "['accuracy']",
+      "keras_version": "3.12.0"
+    },
+    "layer_details": [
+      {
+        "name": "input_layer",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 21101)",
+        "count_params": 0
+      },
+      {
+        "name": "dense",
+        "class_name": "Dense",
+        "units": 256,
+        "activation": "LeakyReLU",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 5402112
+      },
+      {
+        "name": "batch_normalization",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 1024
+      },
+      {
+        "name": "dropout",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": null,
+        "rate": 0.1,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_1",
+        "class_name": "Dense",
+        "units": 128,
+        "activation": "LeakyReLU",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 32896
+      },
+      {
+        "name": "batch_normalization_1",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 512
+      },
+      {
+        "name": "dropout_1",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": null,
+        "rate": 0.2,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_2",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 5)",
+        "count_params": 645
+      }
+    ],
+    "training_history": null,
+    "load_error": {
+      "error_type": "TypeError",
+      "error": "'module' object does not support item assignment",
+      "error_repr": "TypeError(\"'module' object does not support item assignment\")"
+    }
+  },
+  "NN_RS_AE_Purified_bestmodel": {
+    "relative_path": "Purified\\NN_RS_AE_Purified_bestmodel.pkl",
+    "group_folder": "Purified",
+    "cohort": "TCGA",
+    "purified": true,
+    "sampler": "None",
+    "uses_ae": true,
+    "load_method": "joblib_load",
+    "file_size_bytes": 1697349,
+    "file_size_mb": 1.62,
+    "model_type": "KerasClassifier",
+    "pipeline_steps": [],
+    "pipeline_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 64,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01B03E90>",
+        "<__main__.HistoryLogger object at 0x000001CB01A8E750>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.0001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.1,
+      "model__dropout_rate1": 0.2,
+      "model__activation": "tanh"
+    },
+    "sampler_params": null,
+    "nn_wrapper_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 64,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB01B03E90>",
+        "<__main__.HistoryLogger object at 0x000001CB01A8E750>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.0001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.1,
+      "model__dropout_rate1": 0.2,
+      "model__activation": "tanh"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 500,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        500
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 104005,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 2000
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.2,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_500",
+        "class_name": "Dense",
+        "units": 200,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 100200
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 800
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_501",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1005
+      }
+    ],
+    "training_history": null
+  },
+  "NN_RS_Purified_bestmodel": {
+    "relative_path": "Purified\\NN_RS_Purified_bestmodel.pkl",
+    "group_folder": "Purified",
+    "cohort": "TCGA",
+    "purified": true,
+    "sampler": "None",
+    "uses_ae": false,
+    "load_method": "fallback_pickle_parse",
+    "file_size_bytes": 79566223,
+    "file_size_mb": 75.88,
+    "model_type": "Keras/SciKeras pickle (fallback parsed)",
+    "pipeline_steps": [
+      "nn"
+    ],
+    "pipeline_params": null,
+    "sampler_params": null,
+    "nn_wrapper_params": {
+      "epochs": 1,
+      "batch_size": 32,
+      "random_state": 0
+    },
+    "trained_attributes": {
+      "n_features_in_": 19277,
+      "input_shape": "(None, 19277)",
+      "output_shape": "(None, 5)",
+      "n_classes": 5,
+      "total_trainable_params": 4970245,
+      "optimizer": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": "['accuracy']",
+      "keras_version": "3.13.2"
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 19277)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_750",
+        "class_name": "Dense",
+        "units": 256,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 4935168
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 1024
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": null,
+        "rate": 0.1,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_751",
+        "class_name": "Dense",
+        "units": 128,
+        "activation": "tanh",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 32896
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 512
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": null,
+        "rate": 0.1,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_752",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 5)",
+        "count_params": 645
+      }
+    ],
+    "training_history": null,
+    "load_error": {
+      "error_type": "TypeError",
+      "error": "<class 'keras.src.models.sequential.Sequential'> could not be deserialized properly. Please ensure that components that are Python object instances (layers, models, etc.) returned by `get_config()` are explicitly deserialized in the model's `from_config()` method.\n\nconfig={'module': 'keras', 'class_name': 'Sequential', 'config': {'name': 'sequential_250', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'layers': [{'module': 'keras.layers', 'class_name': 'InputLayer', 'config': {'batch_shape': [None, 19277], 'dtype': 'float32', 'sparse': False, 'ragged': False, 'name': 'input_layer_250', 'optional': False}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_750', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None}, 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 19277]}}, {'module': 'keras.layers', 'class_name': 'BatchNormalization', 'config': {'name': 'batch_normalization_500', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'axis': -1, 'momentum': 0.99, 'epsilon': 0.001, 'center': True, 'scale': True, 'beta_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'gamma_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'moving_mean_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'moving_variance_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'beta_regularizer': None, 'gamma_regularizer': None, 'beta_constraint': None, 'gamma_constraint': None, 'synchronized': False}, 'registered_name': None, 'build_config': {'input_shape': [None, 256]}}, {'module': 'keras.layers', 'class_name': 'Dropout', 'config': {'name': 'dropout_500', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'rate': 0.1, 'seed': None, 'noise_shape': None}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_751', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'units': 128, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 256]}}, {'module': 'keras.layers', 'class_name': 'BatchNormalization', 'config': {'name': 'batch_normalization_501', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'axis': -1, 'momentum': 0.99, 'epsilon': 0.001, 'center': True, 'scale': True, 'beta_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'gamma_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'moving_mean_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'moving_variance_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'beta_regularizer': None, 'gamma_regularizer': None, 'beta_constraint': None, 'gamma_constraint': None, 'synchronized': False}, 'registered_name': None, 'build_config': {'input_shape': [None, 128]}}, {'module': 'keras.layers', 'class_name': 'Dropout', 'config': {'name': 'dropout_501', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'rate': 0.1, 'seed': None, 'noise_shape': None}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_752', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'units': 5, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 128]}}], 'build_input_shape': [None, 19277]}, 'registered_name': None, 'build_config': {'input_shape': [None, 19277]}, 'compile_config': {'optimizer': {'module': 'keras.optimizers', 'class_name': 'Adam', 'config': {'name': 'adam', 'learning_rate': 9.999999747378752e-05, 'weight_decay': None, 'clipnorm': None, 'global_clipnorm': None, 'clipvalue': None, 'use_ema': False, 'ema_momentum': 0.99, 'ema_overwrite_frequency': None, 'loss_scale_factor': None, 'gradient_accumulation_steps': None, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': False}, 'registered_name': None}, 'loss': 'sparse_categorical_crossentropy', 'loss_weights': None, 'metrics': ['accuracy'], 'weighted_metrics': None, 'run_eagerly': False, 'steps_per_execution': 1, 'jit_compile': False}}.\n\nException encountered: <class 'keras.src.layers.core.dense.Dense'> could not be deserialized properly. Please ensure that components that are Python object instances (layers, models, etc.) returned by `get_config()` are explicitly deserialized in the model's `from_config()` method.\n\nconfig={'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_750', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None}, 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 19277]}}.\n\nException encountered: Error when deserializing class 'Dense' using config={'name': 'dense_750', 'trainable': True, 'dtype': 'float32', 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}.\n\nException encountered: Unrecognized keyword arguments passed to Dense: {'quantization_config': None}",
+      "error_repr": "TypeError(\"<class 'keras.src.models.sequential.Sequential'> could not be deserialized properly. Please ensure that components that are Python object instances (layers, models, etc.) returned by `get_config()` are explicitly deserialized in the model's `from_config()` method.\\n\\nconfig={'module': 'keras', 'class_name': 'Sequential', 'config': {'name': 'sequential_250', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'layers': [{'module': 'keras.layers', 'class_name': 'InputLayer', 'config': {'batch_shape': [None, 19277], 'dtype': 'float32', 'sparse': False, 'ragged': False, 'name': 'input_layer_250', 'optional': False}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_750', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None}, 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 19277]}}, {'module': 'keras.layers', 'class_name': 'BatchNormalization', 'config': {'name': 'batch_normalization_500', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'axis': -1, 'momentum': 0.99, 'epsilon': 0.001, 'center': True, 'scale': True, 'beta_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'gamma_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'moving_mean_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'moving_variance_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'beta_regularizer': None, 'gamma_regularizer': None, 'beta_constraint': None, 'gamma_constraint': None, 'synchronized': False}, 'registered_name': None, 'build_config': {'input_shape': [None, 256]}}, {'module': 'keras.layers', 'class_name': 'Dropout', 'config': {'name': 'dropout_500', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'rate': 0.1, 'seed': None, 'noise_shape': None}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_751', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'units': 128, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 256]}}, {'module': 'keras.layers', 'class_name': 'BatchNormalization', 'config': {'name': 'batch_normalization_501', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'axis': -1, 'momentum': 0.99, 'epsilon': 0.001, 'center': True, 'scale': True, 'beta_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'gamma_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'moving_mean_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'moving_variance_initializer': {'module': 'keras.initializers', 'class_name': 'Ones', 'config': {}, 'registered_name': None}, 'beta_regularizer': None, 'gamma_regularizer': None, 'beta_constraint': None, 'gamma_constraint': None, 'synchronized': False}, 'registered_name': None, 'build_config': {'input_shape': [None, 128]}}, {'module': 'keras.layers', 'class_name': 'Dropout', 'config': {'name': 'dropout_501', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'rate': 0.1, 'seed': None, 'noise_shape': None}, 'registered_name': None}, {'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_752', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None, 'shared_object_id': 1624713976128}, 'units': 5, 'activation': 'softmax', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 128]}}], 'build_input_shape': [None, 19277]}, 'registered_name': None, 'build_config': {'input_shape': [None, 19277]}, 'compile_config': {'optimizer': {'module': 'keras.optimizers', 'class_name': 'Adam', 'config': {'name': 'adam', 'learning_rate': 9.999999747378752e-05, 'weight_decay': None, 'clipnorm': None, 'global_clipnorm': None, 'clipvalue': None, 'use_ema': False, 'ema_momentum': 0.99, 'ema_overwrite_frequency': None, 'loss_scale_factor': None, 'gradient_accumulation_steps': None, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': False}, 'registered_name': None}, 'loss': 'sparse_categorical_crossentropy', 'loss_weights': None, 'metrics': ['accuracy'], 'weighted_metrics': None, 'run_eagerly': False, 'steps_per_execution': 1, 'jit_compile': False}}.\\n\\nException encountered: <class 'keras.src.layers.core.dense.Dense'> could not be deserialized properly. Please ensure that components that are Python object instances (layers, models, etc.) returned by `get_config()` are explicitly deserialized in the model's `from_config()` method.\\n\\nconfig={'module': 'keras.layers', 'class_name': 'Dense', 'config': {'name': 'dense_750', 'trainable': True, 'dtype': {'module': 'keras', 'class_name': 'DTypePolicy', 'config': {'name': 'float32'}, 'registered_name': None}, 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}, 'registered_name': None, 'build_config': {'input_shape': [None, 19277]}}.\\n\\nException encountered: Error when deserializing class 'Dense' using config={'name': 'dense_750', 'trainable': True, 'dtype': 'float32', 'units': 256, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'module': 'keras.initializers', 'class_name': 'GlorotUniform', 'config': {'seed': None}, 'registered_name': None}, 'bias_initializer': {'module': 'keras.initializers', 'class_name': 'Zeros', 'config': {}, 'registered_name': None}, 'kernel_regularizer': None, 'bias_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None, 'quantization_config': None}.\\n\\nException encountered: Unrecognized keyword arguments passed to Dense: {'quantization_config': None}\")"
+    }
+  },
+  "NN_SMOTE_RS_AE_Purified_bestmodel": {
+    "relative_path": "Purified\\NN_SMOTE_RS_AE_Purified_bestmodel.pkl",
+    "group_folder": "Purified",
+    "cohort": "TCGA",
+    "purified": true,
+    "sampler": "SMOTE",
+    "uses_ae": true,
+    "load_method": "joblib_load",
+    "file_size_bytes": 1838036,
+    "file_size_mb": 1.75,
+    "model_type": "Pipeline",
+    "pipeline_steps": [
+      "smote",
+      "nn"
+    ],
+    "pipeline_params": {
+      "memory": null,
+      "steps": [
+        [
+          "smote",
+          "SMOTE(k_neighbors=3, random_state=0)"
+        ],
+        [
+          "nn",
+          "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB0199AED0>, <__main__.HistoryLogger object at 0x000001CB01CBADB0>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.001\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.2\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=relu\n)"
+        ]
+      ],
+      "transform_input": null,
+      "verbose": false,
+      "smote": "SMOTE(k_neighbors=3, random_state=0)",
+      "nn": "KerasClassifier(\n\tmodel=<function create_classifier at 0x000001CB4B045DA0>\n\tbuild_fn=None\n\twarm_start=False\n\trandom_state=0\n\toptimizer=rmsprop\n\tloss=sparse_categorical_crossentropy\n\tmetrics=None\n\tbatch_size=16\n\tvalidation_batch_size=None\n\tverbose=0\n\tcallbacks=[<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB0199AED0>, <__main__.HistoryLogger object at 0x000001CB01CBADB0>]\n\tvalidation_split=0.0\n\tshuffle=True\n\trun_eagerly=False\n\tepochs=100\n\tclass_weight=None\n\tmodel__learning_rate=0.001\n\tmodel__hidden_dim=200\n\tmodel__dropout_rate2=0.2\n\tmodel__dropout_rate1=0.1\n\tmodel__activation=relu\n)",
+      "smote__k_neighbors": 3,
+      "smote__random_state": 0,
+      "smote__sampling_strategy": "auto",
+      "nn__model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "nn__build_fn": null,
+      "nn__warm_start": false,
+      "nn__random_state": 0,
+      "nn__optimizer": "rmsprop",
+      "nn__loss": "sparse_categorical_crossentropy",
+      "nn__metrics": null,
+      "nn__batch_size": 16,
+      "nn__validation_batch_size": null,
+      "nn__verbose": 0,
+      "nn__callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB0199AED0>",
+        "<__main__.HistoryLogger object at 0x000001CB01CBADB0>"
+      ],
+      "nn__validation_split": 0.0,
+      "nn__shuffle": true,
+      "nn__run_eagerly": false,
+      "nn__epochs": 100,
+      "nn__class_weight": null,
+      "nn__model__learning_rate": 0.001,
+      "nn__model__hidden_dim": 200,
+      "nn__model__dropout_rate2": 0.2,
+      "nn__model__dropout_rate1": 0.1,
+      "nn__model__activation": "relu"
+    },
+    "sampler_params": {
+      "k_neighbors": 3,
+      "random_state": 0,
+      "sampling_strategy": "auto"
+    },
+    "nn_wrapper_params": {
+      "model": "<function create_classifier at 0x000001CB4B045DA0>",
+      "build_fn": null,
+      "warm_start": false,
+      "random_state": 0,
+      "optimizer": "rmsprop",
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": null,
+      "batch_size": 16,
+      "validation_batch_size": null,
+      "verbose": 0,
+      "callbacks": [
+        "<keras.src.callbacks.early_stopping.EarlyStopping object at 0x000001CB0199AED0>",
+        "<__main__.HistoryLogger object at 0x000001CB01CBADB0>"
+      ],
+      "validation_split": 0.0,
+      "shuffle": true,
+      "run_eagerly": false,
+      "epochs": 100,
+      "class_weight": null,
+      "model__learning_rate": 0.001,
+      "model__hidden_dim": 200,
+      "model__dropout_rate2": 0.2,
+      "model__dropout_rate1": 0.1,
+      "model__activation": "relu"
+    },
+    "trained_attributes": {
+      "classes_": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_features_in_": 500,
+      "target_type_": "multiclass",
+      "input_shape": [
+        null,
+        500
+      ],
+      "output_shape": [
+        null,
+        5
+      ],
+      "total_trainable_params": 104005,
+      "optimizer": "Adam",
+      "learning_rate": 0.0010000000474974513,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics_names": [
+        "loss",
+        "compile_metrics"
+      ],
+      "history_keys": null,
+      "history_epochs_recorded": null
+    },
+    "layer_details": [
+      {
+        "name": "input_layer_250",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_500",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 2000
+      },
+      {
+        "name": "dropout_500",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.1,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_500",
+        "class_name": "Dense",
+        "units": 200,
+        "activation": "linear",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 100200
+      },
+      {
+        "name": "re_lu_70",
+        "class_name": "ReLU",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "batch_normalization_501",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": "None",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 800
+      },
+      {
+        "name": "dropout_501",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": "None",
+        "rate": 0.2,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 0
+      },
+      {
+        "name": "dense_501",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": "None",
+        "output_shape": "None",
+        "count_params": 1005
+      }
+    ],
+    "training_history": null
+  },
+  "NN_SMOTE_RS_Purified_bestmodel": {
+    "relative_path": "Purified\\NN_SMOTE_RS_Purified_bestmodel.pkl",
+    "group_folder": "Purified",
+    "cohort": "TCGA",
+    "purified": true,
+    "sampler": "SMOTE",
+    "uses_ae": false,
+    "load_method": "fallback_pickle_parse",
+    "file_size_bytes": 90386034,
+    "file_size_mb": 86.2,
+    "model_type": "Keras/SciKeras pickle (fallback parsed)",
+    "pipeline_steps": [
+      "smote",
+      "nn"
+    ],
+    "pipeline_params": null,
+    "sampler_params": {
+      "k_neighbors": 5
+    },
+    "nn_wrapper_params": {
+      "epochs": 1,
+      "batch_size": 16,
+      "random_state": 0
+    },
+    "trained_attributes": {
+      "n_features_in_": 19277,
+      "input_shape": "(None, 19277)",
+      "output_shape": "(None, 5)",
+      "n_classes": 5,
+      "total_trainable_params": 4970245,
+      "optimizer": "Adam",
+      "learning_rate": 0.0010000000474974513,
+      "loss": "sparse_categorical_crossentropy",
+      "metrics": "['accuracy']",
+      "keras_version": "3.12.0"
+    },
+    "layer_details": [
+      {
+        "name": "input_layer",
+        "class_name": "InputLayer",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 19277)",
+        "count_params": 0
+      },
+      {
+        "name": "dense",
+        "class_name": "Dense",
+        "units": 256,
+        "activation": "LeakyReLU",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 4935168
+      },
+      {
+        "name": "batch_normalization",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 1024
+      },
+      {
+        "name": "dropout",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": null,
+        "rate": 0.1,
+        "input_shape": null,
+        "output_shape": "(None, 256)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_1",
+        "class_name": "Dense",
+        "units": 128,
+        "activation": "LeakyReLU",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 32896
+      },
+      {
+        "name": "batch_normalization_1",
+        "class_name": "BatchNormalization",
+        "units": null,
+        "activation": null,
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 512
+      },
+      {
+        "name": "dropout_1",
+        "class_name": "Dropout",
+        "units": null,
+        "activation": null,
+        "rate": 0.2,
+        "input_shape": null,
+        "output_shape": "(None, 128)",
+        "count_params": 0
+      },
+      {
+        "name": "dense_2",
+        "class_name": "Dense",
+        "units": 5,
+        "activation": "softmax",
+        "rate": null,
+        "input_shape": null,
+        "output_shape": "(None, 5)",
+        "count_params": 645
+      }
+    ],
+    "training_history": null,
+    "load_error": {
+      "error_type": "TypeError",
+      "error": "'module' object does not support item assignment",
+      "error_repr": "TypeError(\"'module' object does not support item assignment\")"
+    }
+  }
+}
