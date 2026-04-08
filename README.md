@@ -15,19 +15,26 @@ In partial fulfillment of the requirements for the degree of Bachelor of Science
 
 ### Breast Cancer
 According to the Global Cancer Statistics 2020 and estimates from the Global Cancer Observatory, breast cancer was the most commonly diagnosed cancer in 2020. It accounted for approximately 2.3 million new cases and around 684,996 deaths, making up to 11.7% of the estimated global distribution of new cancer cases.
-
+\
+\
+<img width="650" height="580" alt="Piechart of new cancer cases" src="https://github.com/user-attachments/assets/989d0a81-d560-46c2-80c4-d0e7d6f9f76f" />
+\
+\
 Given its global prevalence, it is important to understand its molecular subtypes, as these can help in guiding treatment decisions and predicting patient outcomes.
 
 For our study, we focused on the PAM50 subtypes, because compared to other subtype classifications, these are more closely linked with prognostic and clinical outcomes. PAM50 subtypes include: Luminal A, Luminal B, HER2-enriched, Basal-like, Normal-like. With each responding differently to treatment.
 
+---
 ### DNA Methylation
 DNA methylation is a form of epigenetic regulation that helps cells determine which genes should be turned on or off. These methylation markers can be obtained from blood, urine, or saliva, and they are more stable over time compared to RNA data, allowing for longer-term storage and analysis. In breast cancer, abnormal methylation patterns may lead to the silencing of tumor suppressor genes or the activation of oncogenes. Moreover, studies have shown that methylation profiles are often subtype-specific, making them particularly useful for distinguishing between different breast cancer subtypes.
 
+---
 ### Tumor Purity
 Tumor purity refers to the percentage of cancer cells present in a tissue sample, compared to non-cancerous cells such as normal tissue cells. It is important to account for because low-purity samples can distort DNA methylation signals, which may lead to incorrect clustering or cancer subtype classification.
 
-To address this, we use an R package called InfiniumPurify, which estimates tumor purity and adjusts methylation beta values, which could allow for more accurate analysis of tumor-specific patterns.
+To address this, we use an R package called [InfiniumPurify](https://cran.r-project.org/web/packages/InfiniumPurify/index.html), which estimates tumor purity and adjusts methylation beta values, which could allow for more accurate analysis of tumor-specific patterns.
 
+---
 ### Datasets
 For the project, we used the following datasets:
 - TCGA Methylation450k
@@ -45,6 +52,7 @@ For testing, each dataset was duplicated and applied with InfiniumPurify, for a 
 - Norway Purified
 Each dataset was split into 80% for training and 20% for testing.
 
+---
 ### Models and Techniques
 - Machine Learning Algorithms
   - Random Forest
@@ -63,7 +71,9 @@ Each dataset was split into 80% for training and 20% for testing.
 
 - Explainability Techniques
   - Shapley Additive Explanations (SHAP)
- 
+
+<img width="1321" height="692" alt="Configs per algorithm" src="https://github.com/user-attachments/assets/31e629f8-b4cd-4c5a-8ccd-ed9ec64b1dc6" />
+
 For a total of 72 models.
 
 ## File Structure
@@ -80,3 +90,6 @@ For a total of 72 models.
 - exploredata.ipynb
 - purification_effect.ipynb
 - TCGA_Norway_EDA_No_Split.ipynb
+
+## References
+- Sung, H., Ferlay, J., Siegel, R. L., Laversanne, M., Soerjomataram, I., Jemal, A., & Bray, F. (2021). Global Cancer Statistics 2020: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries. CA a Cancer Journal for Clinicians, 71(3), 209–249. https://doi.org/10.3322/caac.21660
